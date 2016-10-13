@@ -1,4 +1,4 @@
-TARGET=abstract
+TARGET=problemstatement
 HTML=main_html
 
 default: pdf
@@ -16,10 +16,7 @@ clean:
 	rm *.log
 	rm *.dvi
 	rm *.ps
-
-veryclean:
 	rm *.aux
-	rm *.log
-	rm *.dvi
-	rm *.ps
+
+cleanpdf:
 	rm *.pdf
