@@ -1,5 +1,11 @@
 \documentclass{article}
-
+\newcommand{\namesigdate}[2][5cm]{%
+  \begin{tabular}{@{}p{#1}@{}}
+    #2 \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Signature}} \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Date}}
+  \end{tabular}
+}
 \begin{document}
 \title{Lidar Point Clouds and VR}
 \author{Joshua Bowen, Taylor Fahlman, Adam Puckette}
@@ -8,16 +14,26 @@
 
 \abstract
 
-The goal is to create a virtual-reality application that would allow users of most head-mounted virtual-reality devices to view and manipulate point-cloud data. The solution will draw upon the existing code-base of the OSVR platform and that of the open-source point-cloud visualization software CloudCompare. This will allow for a modular and platform-independent design. This way, anyone with a Head Mounted Display (HMD) will be able to download and view point-cloud data without the 3D TV and specialized hardware needed for previous implementations. In the solution, there will be a GUI which will allow the user to manipulate the point-cloud data from a first-person and third-person perspective. It will also use the Leap Motion's gesture recognition capability to seamlessly respond to user commands.
+The goal is to create a virtual-reality application that would allow users of most head-mounted virtual-reality devices to view and manipulate point-cloud data. The solution will draw upon two existing codebases. First, the Open-Source Virtual Realtiy platform (OSVR), which is a codebase designed with compatability in mind. Second, the open-source point-cloud visualization software CloudCompare, which is well-supported and handles multiple file formats. These two codebases will allow us to create modular and platform-independent software. This way, anyone with a Head Mounted Display (HMD) will be able to download and view point-cloud data without needing specailized hardware. In the solution, there will be a Graphical User Interface (GUI) which will allow the user to view and manipulate the point-cloud data from a first-person and third-person perspective. Time permitting, we also plan to use Leap Motion's gesture recognition capability to seamlessly respond to user commands.
 
-
+\vfill
 \section*{Problem Statement}
 
-The lack of immersive 3d data cloud viewing software is causing frustration for 3d data analysts. Data clouds are a 3-dimensional form of data. However, most prominent forms of analysis for this data limit the analyst to a 2-dimensional screen. 3-dimensional televisions have been used as a temporary, but not quite perfect, solution to this problem. What is needed is a truly immersive data viewing experience through the form of virtual reality headwear.
+The lack of immersive 3d point cloud viewing software is causing frustration for 3d data analysts. Point clouds are a 3-dimensional form of data, but most prominent forms of analysis for this data are limited to 2D screen. 3D televisions have been used as a solution to this problem, however they don't offer true immersion and have limited portability. What is needed is a truly immersive data viewing experience through the form of virtual reality headwear.
 
 \section*{Proposed Solution}
 
-To solve the problem presented, the Cloud Compare software and the OSVR framework will be connected. In this way, users of Cloud Compare can then use most VR headsets available to analyze and interact with their data in a 3D virtual reality space. This will allow for the finer control desired for point cloud files. At the expo a laptop with an attached headset, running the Cloud Compare software, and the code connecting it to the OSVR framework will be there. People will be able to put it on and explore a point cloud set, possibly one of the interior of the Kelly Engineering Center. In order to measure performance, there will be different tiers of data points that will need to be rendered well by the headset. For example, the first tier may be rending 100 point of a point cloud, and rendering it at a constant rate as the headset moves. The next tier could be 1000 points, and so on. A typical point cloud used by the client can have millions or billions of points. 
+To solve the problem presented, the Cloud Compare software and the OSVR framework will be connected. In this way, users of CloudCompare can then use most VR headsets available to analyze and interact with their data in a 3D virtual reality space. This will allow for user-friendly and precise selection of 3-dimensional areas within point cloud files. At the expo a laptop with an attached headset, running the CloudCompare software, and the code connecting it to the OSVR framework will be there. People will be able to put it on and explore a point cloud set, possibly one of the interior of the Kelly Engineering Center. In order to measure performance, there will be different tiers of data points that will need to be rendered well by the headset. For example, the first tier may be rendering a 1 million point cloud, and re-rendering it at a constant rate as the headset moves. The next tier could be 1 billion points, and so on. A typical point cloud used by the client can have millions or billions of points. 
+
+\section*{Metrics for Success}
+
+\vspace{2pc}
+
+\noindent \namesigdate{Matt O'Banion} \hfill \namesigdate[3cm]{Adam Puckette}
+
+\vspace{2pc}
+
+\noindent \namesigdate{Taylor Fahlman} \hfill \namesigdate[3cm]{Joshua Bowen}
 
 \end{document}
 
