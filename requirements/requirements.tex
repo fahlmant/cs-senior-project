@@ -16,22 +16,22 @@
 {\Large Taylor Fahlman, Joshua Bowen, Adam Puckette}
 \abstract
 There are 4 main deliverables for this project. Creating an OpenGL test for the OSVR framework;
-writing a proposal to either use Cloud Compare or other software; a simple documentation/summary of
+writing a proposal to either use CloudCompare or other software; a simple documentation/summary of
 the final product; and the final product, where an OSVR headset can interact with the software.
 \end{titlepage}
 
 \section{Introduction}
 \subsection{Purpose}
 
-The purpose of this addon is to allow any user of the open source software Cloud Compare to be able to view point cloud data in Virtual Reality.
+The purpose of this addon is to allow any user of the open source software CloudCompare to be able to view point cloud data in Virtual Reality.
 The user, however, must be in possession of some Virtual Reality headware. 
-In this regard this project is designed for anyone who utilizes Cloud Compare for it's open source cloud data viewing capabilities,
+In this regard this project is designed for anyone who utilizes CloudCompare for it's open source cloud data viewing capabilities,
 and is looking for a more immersive analysis of this data.
 
 \subsection{Scope}
 
-Noctilucent VR will function as an extension or addon of the already existent open source software Cloud Compare.
-When utilized, this software will take the point cloud data as rendered by Cloud Compare and display it in a fashion suitable for virtual reality.
+Noctilucent VR will function as an extension or addon of the already existent open source software CloudCompare.
+When utilized, this software will take the point cloud data as rendered by CloudCompare and display it in a fashion suitable for virtual reality.
 The software will render and update the display of the data in real time.
 Auxillery devices will also be usable to navigate the data.
 Benefits of this software include the viewing of point cloud data as it was intended to be viewed, in 3D.
@@ -48,11 +48,13 @@ Free and Open Source Software: Also known as FOSS, is any software that can be c
 Virtual Reality: Also referred to as VR, is an existing technology which allows the user to put on a headware and have an immersive experience in which turning your head turns the camera and moving your head moves the camera.
 Additionally, visuals are rendered seperatly for both eyes allowing for different perspectives which when put together create a 3D environment.
 
-Cloud Compare: Also referred to as CC, is a FOSS program freely available to users who need to view point cloud data.
+CloudCompare: Also referred to as CC, is a FOSS program freely available to users who need to view point cloud data.
 
 Open Source Virtual Reality: Also referred to as OSVR, is an existing Open Source VR headset and framework. OSVR is designed so that it can be developed on and modified by the the public.
 
 Oculus Developers Kit 2: Also called the DK2, is another existing VR headset, however it is not open source and has since been replaced with a standard production model.
+
+Graphics Processing Unit: Referred to as a GPU, is the piece of hardware inside of a computer responsible for performing microprocesses often associated with graphics rendering or deep learning.
 
 \subsection{References}
 
@@ -65,13 +67,48 @@ Oculus Developers Kit 2: Also called the DK2, is another existing VR headset, ho
 \section{Overall Desciption}
 \subsection{Product Perspective}
 
+\subsubsection{User Interfaces}
 
+Noctilucent VR will make a mild modification to the current CloudCompare interface by adding an option to activate VR mode. 
+When activated CC will begin rendering data for VR instead of for a mintor.
+When in VR mode, CC will utilized a different interace from the default version.
+The new user interface will be designed with VR in mind and will only appear at the need of the user upon the push of a button.
+The VR Interface will include functionality to easily navigate the data and mark areas of interest.
+
+\subsubsection{Hardware Interfaces}
+
+Noctilucent VR will interface with the GPU of the computer to render graphics.
+//NOTE: I don't know what this will look like
+
+\subsubsection{Software Interfaces}
+
+Name: CloudCompare
+Mnemonic: CC
+Specification Number:
+Version Number:
+Source.
+
+CloudCompare will be the software that handles the actual analysis and input of the cloud data information. 
+In relation to our software product we will take what exists already with CloudCompare and add the ability for the software to render the data for VR.
 
 \subsection{Product Functions}
 
+Noctilucent VRs Functions are as follows
+
+\begin{enumerate}[label=(\alph*)]
+\item Render point cloud data in virtual reality
+\item Provide an interface to interact with data
+\end{enumerate}
+
 \subsection{User Characteristics}
 
+Someone using this software is expected to already be familiar with point cloud data and softwares used to navigate it. 
+Familiarity with CloudCompare is expected before jumping intot he VR aspects of it.
+This might be a users first experience with VR if they purchased it for this purpose.
+
 \subsection{Constraints}
+
+//NOTE: Probably not Necessary
 
 \subsection{Assumptions and Dependencies}
 
@@ -79,6 +116,7 @@ It is our assumption that CC will be capable of rendering a million or more poin
 In the event that CC is not capable of such we will need to considering creating a seperate software instead of an extension.
 
 \section{Specific Requirements}
+
 
 
 \end{document}
