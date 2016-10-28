@@ -58,11 +58,15 @@ Graphics Processing Unit: Referred to as a GPU, is the piece of hardware inside 
 
 \subsection{References}
 
-
+The following links are our references:
+  http://www.danielgm.net/cc/
+  http://www.osvr.org/
 
 \subsection{Overview}
 
-
+The user of selected software will be able to plug in an OSVR-supported headset and view their cloud point data in a 3D VR view.
+They will be able to examine and manipulate the data in 3D space. They will be able to rotate and zoom, crop, etc. large data
+sets at a constant framerate, ideally 60 FPS, with 30 as the minimum. 
 
 \section{Overall Desciption}
 \subsection{Product Perspective}
@@ -108,7 +112,11 @@ This might be a users first experience with VR if they purchased it for this pur
 
 \subsection{Constraints}
 
-//NOTE: Probably not Necessary
+The possible constraints mostly rely in the way CC uses OpenGL. There have been repoted issues with the software in which
+stuttering was found with larger data sets. With this possible limitation already present in 2D view, enabling 3D support would
+likely make the situation worse. However, the lead developer has stated he will help in this case, and some of these problems 
+may be able to be fixed. In the case that theses cannot be fixed, there is also a linux-only research program which can be used
+instead that already supports 3D viewing, but wi
 
 \subsection{Assumptions and Dependencies}
 
@@ -117,7 +125,19 @@ In the event that CC is not capable of such we will need to considering creating
 
 \section{Specific Requirements}
 
+Specifically, an OpenGL program written to test the OSVR framework will be needed. This will simply involve an OBJ viewer in OpenGL,
+and some 3D OBJ file to view. 
 
+Reasearch will be needed on the constraints of OpenGL. Specifically, the viability of CC as the medium of delivery will need to be
+assesed. A comparison against the research linux-based software will be included in this reasearch.
+
+Once a solution is decided on, a simplified documentation of the implementation will be written. This will address what parts of
+the architechture was needed to implement this change, as well as setting and other relevant information for future developers
+and users of the final product. 
+
+Finally, either a plugin or change to the core code will need to be written and presented to the client, as well as the reposity or
+stakeholder of the software we choose. The ideal situation is that the finaly product would be integrated into the core of the 
+software. However, an external plugin would suffice. 
 
 \end{document}
 
