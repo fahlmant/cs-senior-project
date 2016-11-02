@@ -27,19 +27,17 @@ the final product; and the final product, where an OSVR headset can interact wit
 The purpose of this addon is to allow any user of the open source software CloudCompare to be able to view point cloud data in Virtual Reality.
 The user, however, must be in possession of some Virtual Reality headware. 
 In this regard this project is designed for anyone who utilizes CloudCompare for it's open source cloud data viewing capabilities,
-and is looking for a more immersive analysis of this data.
+and is looking for a more immersive analysis of data.
 
 \subsection{Scope}
 
 Noctilucent VR will function as an extension or addon of the already existent open source software CloudCompare.
-When utilized, this software will take the point cloud data as rendered by CloudCompare and display it in a fashion suitable for virtual reality.
-The software will render and update the display of the data in real time.
-Auxillery devices will also be usable to navigate the data.
-Benefits of this software include the viewing of point cloud data as it was intended to be viewed, in 3D.
-Our goal is to make this software as easy to use and keep a consistent framerate.
-While viewing the data the software should not stutter,
-should draw complete scenes,
-and should render millions of points.
+When utilized, the software will take the point cloud data as rendered by CloudCompare and display it in a fashion suitable for virtual reality.
+The software will render and update the display of the data in at least 30 Frames Per Second at a consistent rate.
+An Auxillery device will also be useable to navigate the data.
+Benefits of the software include the viewing of point cloud data in a more immersive enviroment.
+While viewing the data the software should not freeze or stutter and should draw complete scenes. 
+Additionally the software must render at least a million, ideally more.
 As point cloud data often contain millions of points it is important that this software is able to render as many points as possible.
 
 \subsection{Definitions}
@@ -57,6 +55,8 @@ Oculus Developers Kit 2: Also called the DK2, is another existing VR headset, ho
 
 Graphics Processing Unit: Referred to as a GPU, is the piece of hardware inside of a computer responsible for performing microprocesses often associated with graphics rendering or deep learning.
 
+Frames Per Second: Called FPS, is the refresh rate at which the computer draws the scene over the course of a second.
+
 \subsection{References}
 
 The following links are our references:
@@ -66,8 +66,14 @@ The following links are our references:
 \subsection{Overview}
 
 The user of selected software will be able to plug in an OSVR-supported headset and view their cloud point data in a 3D VR view.
-They will be able to examine and manipulate the data in 3D space. They will be able to rotate and zoom, crop, etc. large data
-sets at a constant framerate, ideally 60 FPS, with 30 as the minimum. 
+They will be able to examine and manipulate the data in 3D space. 
+They will be able to rotate and zoom, crop, etc. large data sets at a frame rate of at least 30 FPS with a stable FPS.
+A stable FPS is an FPS that is within plus or minus 5 FPS of the average FPS over a 5 second period.
+The software should not freeze for longer than half a second more than 3 times over 5 seconds.
+Additionally, freezes longer than 2 seconds at any point must be avoided.
+All renderings should not experience screen tearing more than once every 3 seconds.
+At least a  million points of cloud data must be able to be rendered while meeting all these requirements.
+
 
 \section{Overall Desciption}
 \subsection{Product Perspective}
@@ -75,15 +81,14 @@ sets at a constant framerate, ideally 60 FPS, with 30 as the minimum.
 \subsubsection{User Interfaces}
 
 Noctilucent VR will make a mild modification to the current CloudCompare interface by adding an option to activate VR mode. 
-When activated CC will begin rendering data for VR instead of for a mintor.
-When in VR mode, CC will utilized a different interace from the default version.
+When activated CC will begin rendering data for VR instead of for a monitor.
+When in VR mode, CC will utilize a different interace from the default version.
 The new user interface will be designed with VR in mind and will only appear at the need of the user upon the push of a button.
 The VR Interface will include functionality to easily navigate the data and mark areas of interest.
 
 \subsubsection{Hardware Interfaces}
 
 Noctilucent VR will interface with the GPU of the computer to render graphics.
-//NOTE: I don't know what this will look like
 
 \subsubsection{Software Interfaces}
 
@@ -102,6 +107,11 @@ Noctilucent VRs Functions are as follows
 
 %\item Render point cloud data in virtual reality
 %\item Provide an interface to interact with data
+=======
+\begin{enumerate}
+\item Render point cloud data in virtual reality
+\item Provide an interface to interact with data
+\end{enumerate}
 
 \subsection{User Characteristics}
 
