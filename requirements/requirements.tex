@@ -7,6 +7,7 @@
 \usepackage{tocloft}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{pgfgantt}
 \setlength{\parindent}{0pt}
 
 \begin{document}
@@ -99,10 +100,8 @@ In relation to our software product we will take what exists already with CloudC
 
 Noctilucent VRs Functions are as follows
 
-\begin{enumerate}[label=(\alph*)]
-\item Render point cloud data in virtual reality
-\item Provide an interface to interact with data
-\end{enumerate}
+%\item Render point cloud data in virtual reality
+%\item Provide an interface to interact with data
 
 \subsection{User Characteristics}
 
@@ -138,6 +137,33 @@ and users of the final product.
 Finally, either a plugin or change to the core code will need to be written and presented to the client, as well as the reposity or
 stakeholder of the software we choose. The ideal situation is that the finaly product would be integrated into the core of the 
 software. However, an external plugin would suffice. 
+
+
+%Gantt chart
+\begin{ganttchart}[
+        hgrid=true,
+        vgrid={*{10}{blue, dashed}},
+        y unit chart=0.75cm,
+        x unit=0.75cm
+    ]{1}{13}
+    \gantttitle{Senior Project 2016-2016}{13} \\
+    \gantttitlelist{4, 6, 8, 10, 2, 4, 6, 8, 10, 2, 4, 6, 8}{1} \\
+    \ganttgroup{Documentation}{1}{4}\\
+    \ganttbar[progress=100]{Problem Statemenet}{1}{2}\\
+    \ganttbar[progress=50]{Requirements Document}{1}{3}\\
+    \ganttbar[progress=0]{Technical Review}{2}{4}\\
+    \ganttbar[progress=0]{Design Document}{2}{4}\\
+    \ganttgroup{Implementation}{1}{12}\\
+    \ganttbar[progress=0]{OpenGL OSVR Harness}{1}{4}\\
+    \ganttbar[progress=0]{Research on Software}{4}{7}\\
+    \ganttbar[progress=0]{Documentation}{7}{12}\\
+    \ganttbar[progress=0]{Integration of OSVR with Selected Software}{7}{12}\\
+    \ganttgroup{Presentation}{8}{13}\\
+    \ganttbar[progress=0]{Presentation Board}{10}{13}\\
+    \ganttbar[progress=0]{Expo Setup}{10}{13}\\
+\end{ganttchart}
+
+
 
 \end{document}
 
