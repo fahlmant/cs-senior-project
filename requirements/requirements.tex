@@ -1,5 +1,13 @@
 \documentclass[titlepage]{article}
 
+\newcommand{\namesigdate}[2][5cm]{%
+  \begin{tabular}{@{}p{#1}@{}}
+    #2 \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Signature}} \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Date}}
+  \end{tabular}
+}
+
 \usepackage[T1]{fontenc}
 \usepackage[letterpaper, portrait, margin=0.75in]{geometry}
 \usepackage[singlespacing]{setspace}
@@ -96,7 +104,7 @@ Noctilucent VR will interface with the GPU of the computer to render graphics.
 Name: CloudCompare
 Mnemonic: CC
 Specification Number:
-Version Number:
+Version Number: 2.7
 Source.
 
 CloudCompare will be the software that handles the actual analysis and input of the cloud data information. 
@@ -174,7 +182,13 @@ software. However, an external plugin would suffice.
     \ganttbar[progress=0]{Expo Setup}{10}{13}\\
 \end{ganttchart}
 
+\vspace{2pc}
 
+\noindent \namesigdate{Matt O'Banion} \hfill \namesigdate[3cm]{Adam Puckette}
+
+\vspace{2pc}
+
+\noindent \namesigdate{Taylor Fahlman} \hfill \namesigdate[3cm]{Joshua Bowen}
 
 \end{document}
 
