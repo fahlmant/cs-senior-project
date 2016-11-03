@@ -1,4 +1,4 @@
-\documentclass[titlepage]{article}
+\documentclass{article}
 
 \newcommand{\namesigdate}[2][5cm]{%
   \begin{tabular}{@{}p{#1}@{}}
@@ -19,15 +19,19 @@
 \setlength{\parindent}{0pt}
 
 \begin{document}
-\begin{titlepage}
-\centering
-{\Huge Requirements for Noctilucent VR\par}
-{\Large Taylor Fahlman, Joshua Bowen, Adam Puckette}
+\title {Requirements for Noctilucent VR}
+\author {Taylor Fahlman, Joshua Bowen, Adam Puckette}
+
+\maketitle
+
 \abstract
 There are 4 main deliverables for this project. Creating an OpenGL test for the OSVR framework;
 writing a proposal to either use CloudCompare or another software; a simple documentation/summary of
 the final product; and the final product, where an OSVR headset can interact with the software.
-\end{titlepage}
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
 
 \section{Introduction}
 \subsection{Purpose}
