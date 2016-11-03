@@ -1,4 +1,12 @@
-\documentclass[titlepage]{article}
+\documentclass{article}
+
+\newcommand{\namesigdate}[2][5cm]{%
+  \begin{tabular}{@{}p{#1}@{}}
+    #2 \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Signature}} \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Date}}
+  \end{tabular}
+}
 
 \usepackage[T1]{fontenc}
 \usepackage[letterpaper, portrait, margin=0.75in]{geometry}
@@ -11,15 +19,19 @@
 \setlength{\parindent}{0pt}
 
 \begin{document}
-\begin{titlepage}
-\centering
-{\Huge Requirements for Noctilucent VR\par}
-{\Large Taylor Fahlman, Joshua Bowen, Adam Puckette}
+\title {Requirements for Noctilucent VR}
+\author {Taylor Fahlman, Joshua Bowen, Adam Puckette}
+
+\maketitle
+
 \abstract
 There are 4 main deliverables for this project. Creating an OpenGL test for the OSVR framework;
 writing a proposal to either use CloudCompare or another software; a simple documentation/summary of
 the final product; and the final product, where an OSVR headset can interact with the software.
-\end{titlepage}
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
 
 \section{Introduction}
 \subsection{Purpose}
@@ -98,7 +110,7 @@ OSVR Headset, and the Oculus Rift Headset as a secondary goal.
 Name: CloudCompare
 Mnemonic: CC
 Specification Number:
-Version Number:
+Version Number: 2.7
 Source.
 
 CloudCompare will be the software that handles the actual analysis and input of the cloud data information. 
@@ -175,7 +187,13 @@ software. However, an external plugin would suffice.
     \ganttbar[progress=0]{Expo Setup}{10}{13}\\
 \end{ganttchart}
 
+\vspace{2pc}
 
+\noindent \namesigdate{Matt O'Banion} \hfill \namesigdate[3cm]{Adam Puckette}
+
+\vspace{2pc}
+
+\noindent \namesigdate{Taylor Fahlman} \hfill \namesigdate[3cm]{Joshua Bowen}
 
 \end{document}
 
