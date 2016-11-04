@@ -37,7 +37,7 @@ the final product; and the final product, where an OSVR headset can interact wit
 \subsection{Purpose}
 
 The purpose of this addon is to allow any user of the open source software CloudCompare to be able to view point cloud data in Virtual Reality.
-The user, however, must be in possession of some Virtual Reality headware. 
+The user, however, must be in possession of some Virtual Reality headset.
 In this regard this project is designed for anyone who utilizes CloudCompare for it's open source cloud data viewing capabilities,
 and is looking for a more immersive analysis of data.
 
@@ -49,7 +49,7 @@ The software will render and update the display of the data in at least 30 Frame
 An Auxillery device will also be useable to navigate the data.
 Benefits of the software include the viewing of point cloud data in a more immersive enviroment.
 While viewing the data the software should not freeze or stutter and should draw complete scenes. 
-Additionally the software must render at least a million, ideally more.
+Additionally the software must render at least a million point, ideally more.
 As point cloud data often contain millions of points it is important that this software is able to render as many points as possible.
 
 \subsection{Definitions}
@@ -57,12 +57,12 @@ As point cloud data often contain millions of points it is important that this s
 Free and Open Source Software: Also known as FOSS, is any software that can be classified as both free software and open source software. This means that anyone is freely licensed to modify, copy, or study the code as they see fit. 
 Users are encouraged to improve the software and share their work with others.
 
-Virtual Reality: Also referred to as VR, is an existing technology which allows the user to put on a headware and have an immersive experience in which turning your head turns the camera and moving your head moves the camera.
-Additionally, visuals are rendered seperatly for both eyes allowing for different perspectives which when put together create a 3D environment.
+Virtual Reality: Also referred to as VR, is an existing technology which allows the user to put on a headset and have an immersive experience in which turning your head turns the camera and moving your head moves the camera.
+Additionally, visuals are rendered seperatly for both eyes allowing for different perspectives which when put together create a 3D steroscopic environment.
 
-CloudCompare: Also referred to as CC, is a FOSS program freely available to users who need to view point cloud data.
+CloudCompare: Also referred to as CC, is a FOSS program freely available to users who need to view and analyze point cloud data.
 
-Open Source Virtual Reality: Also referred to as OSVR, is an existing Open Source VR headset and framework. OSVR is designed so that it can be developed on and modified by the the public at only the cost of the headwear.
+Open Source Virtual Reality: Also referred to as OSVR, is an existing Open Source VR headset and VR software platform. OSVR is designed so that it can be developed on and modified by the the public at only the cost of the headwear.
 
 Oculus Developers Kit 2: Also called the DK2, is another existing VR headset, however it is not open source and has since been replaced with a standard production model.
 
@@ -78,7 +78,7 @@ The following links are our references:
 
 \subsection{Overview}
 
-The user of selected software will be able to plug in an OSVR-supported headset and view their cloud point data in a 3D VR view.
+The user of selected software will be able to plug in an OSVR-supported headset and view their point cloud data in a 3D VR view.
 They will be able to examine and manipulate the data in 3D space. 
 They will be able to rotate and zoom, crop, etc. large data sets at a frame rate of at least 30 FPS with a stable FPS.
 A stable FPS is an FPS that is within plus or minus 5 FPS of the average FPS over a 5 second period.
@@ -86,7 +86,6 @@ The software should not freeze for longer than half a second more than 3 times o
 Additionally, freezes longer than 2 seconds at any point must be avoided.
 All renderings should not experience screen tearing more than once every 3 seconds.
 At least a million points of cloud data must be able to be rendered while meeting all these requirements.
-
 
 \section{Overall Desciption}
 \subsection{Product Perspective}
@@ -130,7 +129,7 @@ Noctilucent VRs Functions are as follows
 \subsection{User Characteristics}
 
 Someone using this software is expected to already be familiar with point cloud data and softwares used to navigate it. 
-Familiarity with CloudCompare is expected before jumping intot he VR aspects of it.
+Familiarity with CloudCompare is expected before jumping into the VR aspects of it.
 This might be a users first experience with VR if they purchased it for this purpose.
 
 \subsection{Constraints}
@@ -139,7 +138,7 @@ The possible constraints mostly rely in the way CC uses OpenGL. There have been 
 stuttering was found with larger data sets. With this possible limitation already present in 2D view, enabling 3D support would
 likely make the situation worse. However, the lead developer has stated he will help in this case, and some of these problems 
 may be able to be fixed. In the case that theses cannot be fixed, there is also a linux-only research program which can be used
-instead that already supports 3D viewing, but wi
+instead that already supports 3D steroscopic viewing.
 
 \subsection{Assumptions and Dependencies}
 
@@ -154,12 +153,12 @@ and some 3D OBJ file to view.
 Reasearch will be needed on the constraints of OpenGL. Specifically, the viability of CC as the medium of delivery will need to be
 assesed. A comparison against the research linux-based software will be included in this reasearch.
 
-Once a solution is decided on, a simplified documentation of the implementation will be written. This will address what parts of
+Once a solution is decided on, documentation of the implementation will be written. This will address what parts of
 the architechture was needed to implement this change, as well as setting and other relevant information for future developers
 and users of the final product. 
 
 Finally, either a plugin or change to the core code will need to be written and presented to the client, as well as the reposity or
-stakeholder of the software we choose. The ideal situation is that the finaly product would be integrated into the core of the 
+stakeholder of the software we choose. The ideal situation is that the finally product would be integrated into the core of the 
 software. However, an external plugin would suffice. 
 
 \newpage
@@ -170,7 +169,7 @@ software. However, an external plugin would suffice.
         y unit chart=0.75cm,
         x unit=0.75cm
     ]{1}{13}
-    \gantttitle{Senior Project 2016-2016}{13} \\
+    \gantttitle{Senior Project 2016-2017}{13} \\
     \gantttitlelist{4, 6, 8, 10, 2, 4, 6, 8, 10, 2, 4, 6, 8}{1} \\
     \ganttgroup{Documentation}{1}{4}\\
     \ganttbar[progress=100]{Problem Statemenet}{1}{2}\\
