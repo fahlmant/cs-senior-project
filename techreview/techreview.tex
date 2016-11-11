@@ -1,0 +1,76 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[letterpaper, portrait, margin=0.75in]{geometry}
+\usepackage[singlespacing]{setspace}
+\usepackage{url}
+\usepackage{tocloft}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{pgfgantt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\title {Tech Review for Noctilucent VR - Team 53}
+\author {Taylor Fahlman}
+
+\maketitle
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+
+\section{Introduction}
+
+I (Taylor), am in charge of the selection and implementation of the software component of the project.
+Regardless of the software used for viewing data, some framework needs to be used to integrate the Virtual Reality component.
+The three main frameworks in use today are the Open Source Virtual Reality framework, the Oculus Rift framework, and the 
+HTC Vive framework.
+There also needs to be a framework for the UI. This is highly dependent on the software we select to view the data,
+but the benefits of each will still need to be explored.
+
+\section{Virtual Reality Development Framework}
+\subsection{OSVR}
+The Open Source Virtual Reality project has two major components: a headset (hardware) and a framework (software) to enable
+other software to use various headsets. Here, the focus in on the viability of the software component of OSVR. 
+One big benefit to using the OSVR framework comes from the title; open source. This means that the source code
+of OSVR is open and free for anyone to use, change, and contribute to. Specifically for our project, this is helpful
+as there could arise some limitation or feature that is needed that other frameworks do not provide. In that case,
+writing our own code of top of OSVR, and possibly integrating it back into the core is easy to do. Another benefit
+is that it works with a variety of headsets, and it is supposedly easy to add support for new headsets.
+The biggest downside is that while there is an official headset for OSVR, it is still not the most robust framework.
+There are many improvements that can be made still, and the lower overall quality of this technology shows in demos
+of both the software and hardware. Specifically for the software, just getting a demo to work was complicated. The firmware
+also needed to be upgraded, which is a technical and long process, and there have been reports of this bricking various
+hardware devices. As well, it does not support, for example, the Oculus Rift as well as the Oculus SDK does.
+
+\subsection{Oculus Rift SDK} 
+
+The Oculus Rift SDK is a software development kit intended for the Oculus Rift headset.
+The main benefits of this software is that it is professionaly made and supported, with
+a very high standard. It also is integreatable with software such as the Unreal game engine,
+and the Unity game engine. It also has a large community to learn from and share with. However,
+there are several drawbacks. First of all, this is designed for gaming applications mostly. While most
+VR is as of today, there exists some limitations in the library for the kind of data analysis required of
+this project. The software that the Oculus already works with are not ones this project is considering,
+so this does not give the SDK an advantage per say. The largest drawback, however, 
+is that this SDK is only targeted and provides official support for the Oculus Rift. 
+Other headsets would be difficult or imposible to use with the Oculus Rift SDK.
+Due to the constraints and scope of the Oculus Rift SDK, it does not seem like the best choice for the
+project. 
+
+\subsection{HTC Vive SteamVR SDK}
+
+The HTC Vive SteamVR SDK is also a software development kit, centered around the HTC Vive headset
+and SteamVR by Valve. The SDK is part of the larger HTC OpenSense SDK. The SDK is intended to be used
+with the HTC Vive headset,  
+
+\section{UI Framework}
+\subsection{Qt}
+\subsection{HTML5/CSS/JS}
+\subsection{Other}
+
+\section{Sources}
+
+\end{document}
+
