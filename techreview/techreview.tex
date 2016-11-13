@@ -1,0 +1,106 @@
+\section{Virtual Reality Hardware}
+
+\subsection{Options}
+The three options for VR hardware that I'll be looking at today are the Oculus DK2, Open Source Virtual Reality, and the HTC Vive.
+
+\subsection{Goals}
+Our goal with this review is to find a piece of hardware that isn't too bulky, has a good resolution, is comfortable to wear, and is affordable to the general public.
+
+\subsection{Criteria}
+As mentioned our goal is to find something that works well, is comfortable, and is affordable. 
+A more strict criteria is something that is at least 720p ideally 1080p resolution.
+It should cost less than 500 Dollars, ideally even cheaper.
+Bulkiness, and comfort will not be a criteria as they aren't measurable, however if something has a pleathora of cables or appears actively uncomfortable that will be noted.
+
+\subsection{Evaluation}
+\subsubsection{Oculus DK2}
+The DK2 is at this point an outdated piece of Oculus equipment however it is something we have access to and for development purposes would be sufficient. 
+Current models of the Oculus Rift cost about 600 Dollars which is significantly over our ideal price range and might start becoming too expensive for the average user to want to invest in \cite{oculushardware}. 
+The website Rift Info indicates that the Oculus DK2 has a 1080p resolution as well as a 75Hz refresh rate \cite{riftinfo}.
+Both of these meet our goals.
+Additionally Rift Info indicates that the DK2 weighs 440 grams or about a pound \cite{riftinfo}.
+
+\subsubsection{OSVR}
+Again I will be looking at a slightly outdated piece of hardware when it comes to the OSVR. 
+The OSVR that we have on hand, and the one that I'll be looking at, is the OSVR Hacker Dev Kit 1.4. 
+It has since been replaced with the Hacker Dev Kit 2, and the Dev Kit 2.
+Unlike with the Oculus DK2, however, the OSVR DK1.4 is still available for purchase.
+According to Sensics, the OSVR DK1.4 has a 1080p resolution and a refresh rate of 60Hz \cite{sensicsosvr}.
+The OSVR website has the cost of this device as being 300 Dollars \cite{osvrhardware}.
+OSVR also states that it should only need a GTX660 or AMD equivilant GPU to run \cite{osvrhardware}.
+
+\subsubsection{HTC VIVE}
+Unlike with Oculus and OSVR, the HTC VIVE does not have an early developers version of the equipment available for purchase.
+The current model of the HTC VIVE listed on the website is 800 Dollars \cite{vivehardware}.
+The Vive has a 2160 by 1200 resolution and a refresh rate of 90Hz \cite{vivehardware}.
+While seemingly better than the other options this is about on par with production models of the other VR headsets \cite{osvrhardware}\cite{oculushardware}.
+
+\subsection{Discussion}
+In general all of the systems are very comprable, with refresh rates, and resolutions being very similair.
+The HTC VIVE would appear to have superior resolution and refresh rate, but this is because it's a public model.
+As I mentioned  about the more recent OSVR and the public release Oculus both have 2160 by 1200 resolution and higher refreshrates than I listed \cite{oculushardware}\cite{osvrhardware}.
+So the main difference comes down to pricing.
+Because the DK2 is no longer available you have to look at the public release version of the oculus, which is noticbly more expensive than the OSVR but also has better stuff.
+The price is double that of the OSVR DK1.4.
+Both, however, are still cheaper than the VIVE, however the VIVE does come with added peripheral hardware.
+The average user of our software is honestly not going to need anything better than the OSVR provides, at a price that's way more reasonable to the average consumer.
+If you were however looking for something a little more powerful, either the VIVE or Oculus would be superior.
+Which of those two are the better option come down to whether you are interested in the peripheral or not, which likely won't have any added bonus to our software.
+
+\subsection{Decision}
+For the purpose of our project the OSVR will be more than sufficient.
+It's refresh rate and resolution make it sufficient for it's needs.
+It's cheap cost also means it'll be accesible to people who are looking to use VR purely for this purpose.
+
+
+\section{Peripheral Hardware}
+\subsection{Options}
+The three options for Interaction hardware that I'll be looking at are the Wiimote, the Leapmotion, and HTC vive controller.
+
+\subsection{Goals}
+Our goal with this review is to find a piece of hardware that is responsive, and has a wide range of usable functions. The idea hardware is something that will allow the user to easily navigate the virtual space without feeling like the device isn't doing what they want, or is difficult to use.
+
+\subsection{Criteria}
+In accordance with our goal something that meets our requirements is as follows.
+Costs less than 100 Dollars.
+Allows for free range of movement.
+Has a number of easy to identify buttons that can be discerned without removing the headwear.
+
+\subsection{Evaluation}
+\subsubsection{Wiimote}
+According to Wiibrew, a website documenting the hardware and software tech used inside of the wii home console, the wiimote is a blue tooth device \cite{wiibrew}.
+Essentially this means that the device should easily hook up to a computer through bluetooth.
+The issue comes that you'll need to manually install wiimote drivers otherwise the wiimote won't be much use \cite{wiibrew}.
+The step of installing the wiidrivers likely isn't difficult, but it is an extra step that could confuse the process.
+A wiimote has 11 buttons that can be used for inputs, and then additionally a sync button and a power button which likely won't be usable \cite{wiibrew}.
+The wiimote also has a built in accelerometer that tracks the position and angle of the wiimote \cite{wiibrew}.
+Additionally, there is a built in Infered Camera that can pick up the position of the wiimote \cite{wiibrew}.
+A wiimote with wii motion plus costs 20 Dollars on Amazon.
+
+\subsubsection{Leap Motion}
+The Leapmotion is a piece of technology in which the user's hand movements are translated into a digital environment. 
+The technology itself is still in development so it's not perfect just yet.
+Pros of using Leap Motion would be that it doesn't require the user to hold a device while in VR.
+A considerable downside is a lack of buttons which means all actions would need to be performed with gestures. 
+While it could mean actions like zomming in and selecting things are easy it seems like navigating a ui or more complex tasks wouldn't be.
+While a fun piece of technology I can't see it being very practical for our needs.
+A leap motion controller sells for 80 Dollars \cite{leaphardware}.
+
+\subsubsection{VIVE Controller}
+As far as pure tech power the VIVE controller is probably the best option. 
+The Controller comes not only with it's 24 sensors for tracking, but a trackpad for even more precise controlling \cite{vivehardware}.
+The VIVE also has a number buttons with dual stage feedback allowing for more precise input \cite{vivehardware}.
+If we are looking for something that's going to get the job done and done very well the VIVE Controller seems like a great option.
+The main limitatioin with the VIVE is that it requires purchasing the whole package of the HTC VIVE which is a whopping 800 Dollars \cite{vivehardware}.
+
+\section{Discussion}
+Of the three options, the VIVE Controller is by far the superior technology, it's feedback systems, precision, and input, are exactly what we need.
+The main issue of course rolls down on the fact that it is incredible expensive and therefore limits the people who could use our software.
+As our goal is to make a software as freely usable by people as possible it's counter productive to choose something as niche as the VIVE.
+This leaves us with the options of the Wiimote or the Leap Motion.
+I beleive that while the wiimote option requires a lot of extra work tog et working it provides a lot of what we need at an affordable price.
+The Leap Motion unforutnately just doesn't have the input and precision that we need even if it is more of a plug and play product.
+
+\section{Decision}
+For the purposes of our project, and with the goal of making our software as publically accessible as possible, the wiimote is the best option.
+However, if don't properly we can potentially design our software in such a way as to allow for VIVE Controller use by those to which that is accessible. 
