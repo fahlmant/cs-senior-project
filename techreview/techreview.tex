@@ -30,6 +30,10 @@ There also needs to be a framework for the UI. This is highly dependent on the s
 but the benefits of each will still need to be explored.
 
 Joshua is in charge of the selection of VR headset hardware, as well as hardware input methods.
+It is incredibly important that the hardware we use is effecient and coincides with the goals we set for our project.
+In this regard we must find a technology that meets our goals while is also isn't gonna break the bank of any potential users of our software.
+On top of the VR tech is also the interaction tech.
+It's incredibly important that the tech we use to interact with the VR enviroment is useful, easy to use with no sight, and isn't a money sink.
 
 Adam is in charge of the selection of data analysis software the project will use.
 
@@ -61,7 +65,7 @@ The biggest downside is that while there is an official headset for OSVR, it is 
 There are many improvements that can be made still, and the lower overall quality of this technology shows in demos
 of both the software and hardware. Specifically for the software, just getting a demo to work was complicated. The firmware
 also needed to be upgraded, which is a technical and long process, and there have been reports of this bricking various
-hardware devices. As well, it does not support, for example, the Oculus Rift as well as the Oculus SDK does.
+hardware devices. As well, it does not support, for example, the Oculus Rift as well as the Oculus SDK does. \cite{osvrsoft}
 
 \subsection{Oculus Rift SDK} 
 
@@ -76,7 +80,7 @@ so this does not give the SDK an advantage per say. The largest drawback, howeve
 is that this SDK is only targeted and provides official support for the Oculus Rift. 
 Other headsets would be difficult or impossible to use with the Oculus Rift SDK.
 Due to the constraints and scope of the Oculus Rift SDK, it does not seem like the best choice for the
-project. 
+project. \cite{oculussoft}
 
 
 \subsection{HTC Vive SteamVR SDK}
@@ -90,7 +94,7 @@ software distribution service. However, Steam almost exclusively distributes gam
 are some utility and data analysis packages available, Steam and even more so SteamVR are focused on
 games. This again means that the library has some limitations for what the project is attempting. As well,
 it is aimed at only using the HTC Vive headset. Because of these constraints, this does not seem like the
-best choice for the project.
+best choice for the project. \cite{htcsoft}
 
 \subsection{Discussion}
 Based on the criteria, OSVR meets all of them. It is cross platform, both operating systmes, and
@@ -134,7 +138,7 @@ less used target platforms. The downsides of Qt stem from some of its benefits. 
 and complex system, and can be heavy computationally. There is a lot going on in a Qt application,
 and in the case of working with a pre-existing codebase, it may be difficult to display the data
 without breaking another part. Also, while it is likely easy to integrate as an overlay with VR
-because it is based in C++, there is no known official VR overlay support. 
+because it is based in C++, there is no known official VR overlay support. \cite{qtsoft}
 
 \subsection{HTML5/CSS/Javascript}
 This combination of these web technologies is the standard of the modern web. This choice works well
@@ -147,13 +151,14 @@ will use, the limitations of these technologies would definitely show. There are
 complex graphics and these web techs. Also, there is no inherent support for overlay on a virtual
 reality HUD, so that will be an added challenge. And while combining these three technologies can
 be powerful, there is a possibility that with VR, the three will not go together well.
+\cite{htmlcssjs}
 
 \subsection{GTK+}
 GTK+ is similar to Qt. It is a C/C++ based UI framework meant to integrate with pieces of software
 written in C++. It is part of the GNU Project, which means it is open source and free. It also is
 widely used and cross platform. However, there is no built in VR support. But this can be overcome
 with the fact that it is open source. There are not any significant differences from Qt other than the
-aformentioned fact that it is part of the GNU Project.
+aformentioned fact that it is part of the GNU Project. \cite{gtksoft}
 
 \subsection{Discussion}
 Assuming this section is completely independent, it looks as if GTK+ seems to be the best choice.
@@ -165,7 +170,7 @@ and Qt are similar, our choice is Qt.
 \section{Virtual Reality Hardware}
 
 \subsection{Options}
-The three options for VR hardware that I'll be looking at today are the Oculus DK2, Open Source Virtual Reality, and the HTC Vive.
+The three options for VR hardware that I'll be looking at today are the Oculus DK2, Open Source Virtual Reality, and the HTC Vive. 
 
 \subsection{Goals}
 Our goal with this review is to find a piece of hardware that isn't too bulky, has a good resolution, is comfortable to wear, and is affordable to the general public.
@@ -323,5 +328,11 @@ However, it has the advantage of already having a VR framework (VRUI) to work wi
 \subsection{Decision}
 As CloudCompare is the most adaptable and well-documented point-cloud visualization solution available, we plan to use it for our project. 
 Potree viewer may become a more viable option in the near future, but unless we encounter a good reason to switch to it, we will focus our efforts on CloudCompare. 
+
+\newpage
+\bibliography{techreview}
+\bibliographystyle{ieeetr}
+
+
 
 \end{document}

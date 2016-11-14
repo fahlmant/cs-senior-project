@@ -1,0 +1,42 @@
+\begin{thebibliography}{10}
+
+\bibitem{osvrsoft}
+O.~S.~V. Reality, ``Osvr.''
+
+\bibitem{oculussoft}
+Facebook, ``Oculus rift sdk.''
+
+\bibitem{htcsoft}
+HTC, ``Htc vive steamvr sdk.''
+
+\bibitem{qtsoft}
+Qt, ``Qt.''
+
+\bibitem{htmlcssjs}
+Various, ``The web standards model.''
+
+\bibitem{gtksoft}
+G.~Team, ``Gtk+.''
+
+\bibitem{oculushardware}
+O.~V. LLC, ``Oculus rift,'' 2016.
+
+\bibitem{riftinfo}
+R.~Info, ``Oculus rift specs - dk1 vs dk2 comparison.''
+
+\bibitem{sensicsosvr}
+Sensics, ``Osvr hdk hardware.''
+
+\bibitem{osvrhardware}
+O.~S.~V. Reality, ``Osvr.''
+
+\bibitem{vivehardware}
+H.~Corporation, ``Vive.''
+
+\bibitem{wiibrew}
+Wiibrew, ``Wiimote.''
+
+\bibitem{leaphardware}
+L.~M. Inc, ``Leap motion.''
+
+\end{thebibliography}
