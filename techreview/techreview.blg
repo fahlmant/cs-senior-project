@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: techreview.aux
+The style file: ieeetr.bst
+Database file #1: techreview.bib
+Warning--entry type for "oculushardware" isn't style-file defined
+--line 1 of file techreview.bib
+Warning--entry type for "riftinfo" isn't style-file defined
+--line 9 of file techreview.bib
+Warning--entry type for "sensicsosvr" isn't style-file defined
+--line 16 of file techreview.bib
+Warning--entry type for "vivehardware" isn't style-file defined
+--line 23 of file techreview.bib
+Warning--entry type for "osvrhardware" isn't style-file defined
+--line 30 of file techreview.bib
+Warning--entry type for "wiibrew" isn't style-file defined
+--line 37 of file techreview.bib
+Warning--entry type for "leaphardware" isn't style-file defined
+--line 44 of file techreview.bib
+You've used 7 entries,
+            1876 wiz_defined-function locations,
+            498 strings with 3738 characters,
+and the built_in function-call counts, 827 in all, are:
+= -- 58
+> -- 28
+< -- 0
++ -- 14
+- -- 7
+* -- 24
+:= -- 118
+add.period$ -- 1
+call.type$ -- 7
+change.case$ -- 7
+chr.to.int$ -- 0
+cite$ -- 7
+duplicate$ -- 28
+empty$ -- 127
+format.name$ -- 7
+if$ -- 206
+int.to.chr$ -- 0
+int.to.str$ -- 7
+missing$ -- 0
+newline$ -- 24
+num.names$ -- 7
+pop$ -- 37
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 52
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 7
+width$ -- 8
+write$ -- 45
+(There were 7 warnings)

@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{oculushardware}
+O.~V. LLC, ``Oculus rift,'' 2016.
+
+\bibitem{riftinfo}
+R.~Info, ``Oculus rift specs - dk1 vs dk2 comparison.''
+
+\bibitem{sensicsosvr}
+Sensics, ``Osvr hdk hardware.''
+
+\bibitem{osvrhardware}
+O.~S.~V. Reality, ``Osvr.''
+
+\bibitem{vivehardware}
+H.~Corporation, ``Vive.''
+
+\bibitem{wiibrew}
+Wiibrew, ``Wiimote.''
+
+\bibitem{leaphardware}
+L.~M. Inc, ``Leap motion.''
+
+\end{thebibliography}
