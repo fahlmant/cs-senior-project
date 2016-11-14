@@ -1,4 +1,22 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{osvrsoft}
+O.~S.~V. Reality, ``Osvr.''
+
+\bibitem{oculussoft}
+Facebook, ``Oculus rift sdk.''
+
+\bibitem{htcsoft}
+HTC, ``Htc vive steamvr sdk.''
+
+\bibitem{qtsoft}
+Qt, ``Qt.''
+
+\bibitem{htmlcssjs}
+Various, ``The web standards model.''
+
+\bibitem{gtksoft}
+G.~Team, ``Gtk+.''
 
 \bibitem{oculushardware}
 O.~V. LLC, ``Oculus rift,'' 2016.
