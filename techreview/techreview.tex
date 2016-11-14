@@ -12,7 +12,7 @@
 
 \begin{document}
 \title {Tech Review for Noctilucent VR - Team 53}
-\author {Taylor Fahlman, Joshua Bowen}
+\author {Taylor Fahlman, Joshua Bowen, Adam Puckette}
 
 \maketitle
 \newpage
@@ -269,5 +269,59 @@ The Leap Motion unforutnately just doesn't have the input and precision that we 
 For the purposes of our project, and with the goal of making our software as publically accessible as possible, the wiimote is the best option.
 However, if don't properly we can potentially design our software in such a way as to allow for VIVE Controller use by those to which that is accessible. 
 
+\section{Point-Cloud Visualization Software}
+I (Adam Puckette) will be responsible for the point-cloud visualization software that we will use to render our point-cloud data. 
+Our choice of software will depend on its ease of integration, openness, file format compatibility, and performance. 
+This software is an essential component of the project, as we do not have the time or resources to write our own solution. 
+
+\subsection{Options}
+CloudCompare is the software that was first recommended to us by our client, but we are considering two alternatives: LidarViewer and Potree Viewer. 
+All are open-source projects that approach point-cloud visualization in very different ways. 
+LidarViewer is the software that the current 3D TV solution uses. 
+Unfortunately, there is no Windows version of this software. 
+Finally, Potree Viewer is a WebGL-based project that can host the actual file remotely and uses a unique file format.
+
+\subsection{Goals}
+Our goals in this evaluation are as follows. 
+One, to isolate potential points of failure in the proposed solutions. 
+Two, to discover the most efficient solution to implement. 
+Three, to ensure that the software used will meet overall project goals such as openness and portability. 
+If this comparison helps us to decide which solution to use, then it will have accomplished its goals.
+
+\subsection{Criteria}
+The essential differences to be evaluated are as follows. 
+One, supported Operating Systems. Ideally, the software should work on the Windows OS.
+Two, supported file formats. For greater ease of use and adaptability, the software should accept a wider variety of file formats as input. In short, adaptability is our main concern.
+
+\subsection{Evaluation}
+\subsubsection{CloudCompare}
+CloudCompare is well-supported and widely used software that runs on Windows, Mac OS, and Linux. 
+It has a large number of built-in tools for evaluation and manipulation of point-cloud data, and accepts over 15 file types, including BIN, ASCII, PLY, OBJ, VTK, STL, E57, LAS, PCD, FBX, SHP, OFF, PTX, FLS/FWS, and DP. 
+In addition, the software supports third-party plugins, something that we could use to create a VR mode. 
+
+\subsubsection{PotreeViewer}
+Potree Viewer is a relatively recently developed project that uses WebGL to view point-cloud data. 
+It is Windows-only for the moment, and only works with a specialized file format called octree. 
+This file format stores point-cloud data as a single sparse root node with a directory structure of child nodes beneath it. 
+Potree Viewer has fewer built-in tools for point-cloud manipulation, but may perform better than CloudCompare on similar hardware. 
+
+\subsubsection{LidarViewer}
+LidarViewer is the existing software used for the 3D TV setup. It has the advantage of already being designed for VR, but is hampered by being Linux-only. 
+In the absence of other options, LidarViewer would be acceptable.
+
+\subsection{Discussion}
+At first glance, CloudCompare is the obvious choice. 
+Not only does it support Windows, Mac OS, and Linux, but it also accepts a minimum of 15 different file types. 
+Our only concern is whether it can hold up to the rigorous standards required by VR headsets. 
+Potree Viewer is an attractive alternative, but is slightly more limited in its current state. 
+It is Windows-only, which is fine for our purposes, and can be set up to store files remotely on a server. 
+It only accepts a single file format, called octree, which stores point-cloud data as a single sparse root node with a directory structure of child nodes beneath it. 
+Potree Viewer would suit our needs, but may not be as adaptable as CloudCompare. 
+Finally, we have LidarViewer. LidarViewer is Linux-only, and so would not be ideal for our project. 
+However, it has the advantage of already having a VR framework (VRUI) to work with.
+
+\subsection{Decision}
+As CloudCompare is the most adaptable and well-documented point-cloud visualization solution available, we plan to use it for our project. 
+Potree viewer may become a more viable option in the near future, but unless we encounter a good reason to switch to it, we will focus our efforts on CloudCompare. 
 
 \end{document}
