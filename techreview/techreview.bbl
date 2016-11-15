@@ -39,4 +39,13 @@ Wiibrew, ``Wiimote.''
 \bibitem{leaphardware}
 L.~M. Inc, ``Leap motion.''
 
+\bibitem{cloudcompare}
+Various, ``Cloudcompare readme.''
+
+\bibitem{potree}
+Various, ``Github potree documentation.''
+
+\bibitem{lidarviewer}
+P.~Gold and C.~Bowles, ``Lidar viewer manual.''
+
 \end{thebibliography}
