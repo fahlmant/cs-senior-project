@@ -40,7 +40,7 @@ HTC Vive framework.
 There also needs to be a framework for the UI. This is highly dependent on the software we select to view the data,
 but the benefits of each will still need to be explored.
 
-Joshua is in charge of the selection of VR headset hardware, as well as hardware input methods.
+Joshua is in charge of the selection of VR headset hardware, Graphics Processing Unit, as well as hardware input methods.
 It is incredibly important that the hardware we use is effecient and coincides with the goals we set for our project.
 In this regard we must find a technology that meets our goals while is also isn't gonna break the bank of any potential users of our software.
 On top of the VR tech is also the interaction tech.
@@ -234,6 +234,55 @@ For the purpose of our project the OSVR will be more than sufficient.
 It's refresh rate and resolution make it sufficient for it's needs.
 It's cheap cost also means it'll be accesible to people who are looking to use VR purely for this purpose.
 
+
+\section{GPU Hardware}
+\subsection{Options}
+The three options of Graphics Processing Units that I'll be looking at are the NVidia GTX 770, 970, and 1070 chipsets. As part of this similair generation AMD chipsets  will also be considered.
+
+\subsection{Goals}
+Out goal is to find a chipset that is capable of running VR while is also cheap and easy to afford. Because there is a wide variety of similair power chipsets available from other producers the focus will be largely on their RAM and Processing power and less on the cost. If it is beleived that one chipsets cost might not be worth the upgrade that will be notated.
+
+\subsection{Criteria}
+In accordance with out goals something that meets our requirements is as follows.
+Costs less than 400 Dollars.
+VR Ready.
+4 Gigabytes of standard Memory.
+
+\subsection{Evaluation}
+\subsubsection{GTX 770}
+The GTX 770 GPU chipset is now 3 years old having been released in early 2013.
+According to the GeForce website the GTX 770 only has a standard memory of 2 GB \cite{geforce}.
+This might not be a drastic issues if it weren't for other shortcomings.
+The GeForce makes no reference to this chipset being VR ready like it does with later generations of chipsets so whether it will work or not for the usage of rendering point clouds probably comes down to the size of the cloud being rendered.
+The locations listed on the GeForce website for buying cards made with this chipset have the cards as being largely out of stock with those being in stock averaging over 300 dollars in price \cite{geforce}.
+This chipset is both expensive and unsatisfactory.
+
+\subsubsection{GTX 970}
+The GTX 970 was the state of the chipset until just this year when the 1070 was announced and released.
+According to the GeForce website this Chipset has a standard memory of 4 GB \cite{geforce}.
+This puts the 970 at just meeting the requirements set.
+Unlike with the 770 the GeForce does list this chipset as being VR ready \cite{geforce}.
+This chipset could be counted on to at least render some clouds.
+To varify what sizes formal testing would need to be performed.
+Because of it's new replacement the GTX 970 is also largely out of stock in stores, however the locations that do have it in stock average a price at 350 dollars \cite{geforce}.
+This means that this chipset costs roughly the same amount as the GTX 770, so there is no reason to use a GTX 770.
+
+\subsubsection{GTX 1070}
+The GTX 1070 is the new chipset just released by NVidia this year.
+According to the GeForce website this chipset has a standard memory of 8 GB \cite{geforce}.
+This is well over our requirements.
+The 1070 is also listed as being VR ready, with a higher relative performance than the 970 \cite{geforce}.
+The cost of this chipset is about 450 dollars which is well over the cost of the two previous cards \cite{geforce}.
+This chipset could be counted on to perform our task, but it comes at a steeper cost than a 970 would.
+
+\section{Discussion}
+The 770 Can likely be ruled out as it's release before the rise of VR puts it at an incredible disadvantage.
+What the discussion really comes down to is whether you are willing to spend more money on a better card.
+Both the 970 and 1070 are going to be able to perform VR with the 1070 doing it better.
+For our cases the 970 liekly sufficient, however if neccessary we may need to look into purchasing a 1070.
+
+\section{Decision}
+For basic needs the 970 will be sufficient, if the need arises or the money is available, it would be worth getting a 1070.
 
 \section{Peripheral Hardware}
 \subsection{Options}
