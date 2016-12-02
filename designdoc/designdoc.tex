@@ -19,12 +19,18 @@
 \setlength{\parindent}{0pt}
 
 \begin{document}
-\title {Requirements for Noctilucent VR}
+\title {Design Document for Noctilucent VR}
 \author {Taylor Fahlman, Joshua Bowen, Adam Puckette}
+\today
 
 \maketitle
 
 \abstract
+
+\newpage
+\thispagestyle{empty}
+
+\tableofcontents
 
 \newpage
 \thispagestyle{empty}
@@ -185,20 +191,34 @@ The last ineraction is between the UI and the cloud viewing software
 
 \subsubsection{Design Concerns}
 
-When the user interacts with the auxilery device the actions they perform must be registed by the cloud viewing software and by the gpu. 
-That is, when an action is performed with the auxillery device, that action must be viewable in the headset as it happened.
-Additionally, any action that alters or edits the data must also be registered by the cloud viewing software.
-
-When the user interacts with the UI these actions should be registered by the cloud viewing software.
-As with the auxillery device, any action performed by the UI must be registered by the cloud viewing software so that the data can be saved and viewed again later.
+\begin{enumerate}
+	\item Interacting with the auxilery device updates the display and edits the data
+	\item Interacting with the UI updates the display and edits the data
+\end{enumerate}
 
 \subsubsection{Design Elements}
 
-The user, the user interface, the cloud viewing software, the graphics processing unit, the vr headset, and the auxillery device.
+		\textit{Name}: User Interface
+		\textit{Type}: Component\\
+		\textit{Purpose}: Allows the user to perform actions commonly performed to manipulate the data in the point cloud.
+\newline
+		\textit{Name}: Cloud Viewing Software
+		\textit{Type}: Component\\
+		\textit{Purpose}: Houses the data, and performs all the backend workd necessary to edit and view the point cloud.
+\newline
+		\textit{Name}: Graphics Processing Unit
+		\textit{Type}: Component\\
+		\textit{Purpose}: Responsible for rendering the point cloud data so that it can be viewed in Virtual Reality.
+\newline
+		\textit{Name}: Virtual Reality Headset
+		\textit{Type}: Component\\
+		\textit{Purpose}: Used by the user to view the cloud data as it is created by the GPU and the Cloud Viewing Software.
+\newline
+		\textit{Name}: Auxillery Device
+		\textit{Type}: Component\\
+		\textit{Purpose}: A device used by the user to edit, manipulate, and change views of the data without the need for a keyboard and mouse.
 
 \subsection{Design Rationale}
-
-Annexs
 
 \end{document}
 
