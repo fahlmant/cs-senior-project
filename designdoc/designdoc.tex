@@ -26,6 +26,12 @@
 
 \abstract
 
+Noctilucent VR will allow users to view and manipulate point-cloud data in virtual reality. 
+The required concepts, terminologies, design viewpoints, and use methodologies for Noctilucent VR are described herein. 
+Noctilucent VR will be created by integrating an existing open source point-cloud viewing program with the OSVR framework. 
+This will allow us to create modular and platform-independent software. 
+With Noctilucent VR, anyone with a virtual reality headset will be able to download and view point-cloud data without needing specialized hardware.
+
 \newpage
 \thispagestyle{empty}
 
@@ -163,7 +169,7 @@ with one selection.
         \textit{Type}: Hardware unit\\
         \textit{purpose}: The input device is the primary way that the user will interact and manipulate the data viewed. 
         The versatility of this device (or collection of devices if needed), is important, as there are many transformations
-        that are possible in a 3D environment. 
+        that are possible in a 3D environment. This device is also used to select options in the user interface.\\
 \newline
         \textit{Name}: User interface overlay
         \textit{Type}: Component\\
@@ -174,17 +180,55 @@ with one selection.
 
 \subsection{Structure Viewpoint}
 
+The structure of Noctilucent VR follows these constraints:
+The GPU of the computer is able to run and render points in the point-cloud rendering software
+The OSVR framework and the point-cloud rendering software are able to communicate with one another.
+The display device uses the OSVR framework to display the point-cloud data.
+The user interface is then rendered on top of the data.
+An input device is then enabled to interact with the UI.
 
 \subsubsection{Design Concerns}
+The most importat part of the project is the communication between OSVR and the point-clound rendering software.
+While the GPU part of the structure is below that, the rest of the project must only work if that communcation is working.
+Next, the headset must be able to use that link to render the data, then display the corrent user interface, and handle
+input from some input device.
+
 \subsubsection{Design Elements}
+
+\textit{Name}: OVSR and point-cloud software
+\textit{Type}: Connector
+\textit{Purpose}: The connection between these two componenets is the essence of the project. Once these two can interface,
+the rest of the project can be built upon it. This connection is some kind of change in the code of point-cloud software
+to enable the use of the OSVR framework within it, or a external plug-in that achieves the same goal. The OSVR framework
+by its nature will then enable the display device to interact with the point-cloud software.\\
+\newline
+
+\textit{Name}: User interface and rendering of the dataset
+\textit{Type}: Interface
+\textit{Purpose}: There must be some way for the dataset to be manipulated in a traditional software way, with various
+buttons and data-analyzing readouts for the user. This user interface will lay on top of the data, so that while the user
+looks at the data, they can easily find the button or other selection they are looking for. Even though this will be in
+steroscopic 3D, this will closely resemble 'traditional software' with ribbion bars at the top, like a word processor.
+While the specific interactions are not specified, the user interface will at enable the user to perform most any transform
+action possible on the 3D data set.\\
+\newline
+
+\textit{Name}: Input device and point-cloud software
+\textit{Type}: Interface
+\textit{Purpose}: The interface between the input device and the user interface is a given, but a necessity. The user should
+be able to use an input device to select everything within the userinterface, as well as select certain cross sections of the
+data itself. The input device will most likely already be enabled within the OSVR, or will work with OSVR once it is enabled
+in the point cloud software. The input device enables every possible action with this software, and thus needs to be extensively
+tested to ensure every desired action can be achieved with it.
+
 
 \subsection{Interaction Viewpoint}
 
 Noctilucent VR will have six primary interactions.
 The first interaction is between the cloud viewing software and the GPU.
 The second interaction is between the GPU and the VR Software/Headset.
-The third interaction is between the user and the auxillery device.
-The fourth interaction is between the auxilery device and the cloud viewing software.
+The third interaction is between the user and the auxiliary device.
+The fourth interaction is between the auxiliary device and the cloud viewing software.
 The fifth interaction is between the user and the UI.
 The last ineraction is between the UI and the cloud viewing software
 
@@ -227,4 +271,3 @@ The last ineraction is between the UI and the cloud viewing software
 \noindent \namesigdate{Taylor Fahlman} \hfill \namesigdate[3cm]{Joshua Bowen}
 
 \end{document}
-
