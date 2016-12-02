@@ -105,8 +105,30 @@ Matt O'Banion - For use in geo-informatics
 \end{itemize}
 
 \subsection{Context Viewpoint}
+
+The context of a software project is the environment and systems with which it interacts. 
+These external elements are detailed below, along with a description of their interaction with our project and their responsibilities towards the user and each other. 
+This is a broad overview of elements outside the scope of Noctilucent VR that are required in order for the project to be successful. 
+
 \subsubsection{Design Concerns}
+
+\begin{enumerate}
+\item The user, who is responsible for providing positional data, orientation data, and manipulation data. 
+The user receives a graphical representation of the point-cloud data in return.
+\item The point-cloud viewing software, which is responsible for providing the graphical representation of the point cloud data as well as processing the manipulation data.
+\item The OSVR framework, which is responsible for processing the positional and orientation data.  
+\end{enumerate}
+
 \subsubsection{Design Elements}
+
+There are three external factors that form the design context for Noctilucent VR. 
+First there is the user, who will use our software to view and interact with point-cloud data in virtual reality. 
+Second there is the point-cloud viewing software, which will handle the rendering and manipulation of the point cloud data as directed by the user. 
+Finally, there is the OSVR virtual reality framework which will coordinate with the point-cloud viewing software to display the point-cloud data on the user’s virtual reality headset of choice. 
+These three elements form a triangle of interaction. 
+The user provides input in the form of positional tracking and orientation data to the OSVR framework, which in turn coordinates with the point-cloud viewing software to update the headset display. 
+The user also provides interaction data directly to the point-cloud viewing software to measure and manipulate the point-cloud data. 
+The point-cloud viewing software in turn updates the headset display of said measured and manipulated data via the OSVR framework.
 
 \subsection{Interface Viewpoint}
 \subsubsection{Design Concerns}
