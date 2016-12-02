@@ -101,7 +101,6 @@ Matt O'Banion - For use in geo-informatics
  \item Shall render at least million points of cloud data
  \item Shall be usable by any Virtual Reality headware and framework
  \item Shall interface with point-cloud viewing software
- \item Shall ...
 \end{itemize}
 
 \subsection{Context Viewpoint}
@@ -131,10 +130,46 @@ The user also provides interaction data directly to the point-cloud viewing soft
 The point-cloud viewing software in turn updates the headset display of said measured and manipulated data via the OSVR framework.
 
 \subsection{Interface Viewpoint}
+
+The interface of Noctlilucent VR involves both hardware and a software componenets. 
+The harware component will allow the user to manipulate the dataset with physical actions,
+as well as view the dataset.
+The software component will allow the user to perform pre-set complex operations and manipulations
+with one selection. 
+
 \subsubsection{Design Concerns}
+\begin{enumerate}
+\item The display device will enable the user to view and more importantly, move around the data set
+    they are exploring.
+\item The input device will be used for data manipulation. The input from the device allows the user to interact and analyze the
+    data in a highly-controlled fashion.
+\item The User interface overlay will be used to manipulate the display of data, as well as peform similar actions to the physical device,
+    but pre-set so the user does not have to repeat these actions.
+\end{enumerate}
 \subsubsection{Design Elements}
 
+        \textit{Name}: Display device\\
+        \textit{Type}: Hardware unit\\
+        \textit{Purpose}: This device will enable the user to view the data they need to explore, specifically in steroscopic 3D. 
+        This device needs some sort of screen which enables the eyes to view the data in 3D. Most likely, a virtual reality headset
+        will be used, as it has the required screens and technology to display the information in the desired way.\\
+\newline
+        \textit{Name}: Input device
+        \textit{Type}: Hardware unit\\
+        \textit{purpose}: The input device is the primary way that the user will interact and manipulate the data viewed. 
+        The versatility of this device (or collection of devices if needed), is important, as there are many transformations
+        that are possible in a 3D environment. 
+\newline
+        \textit{Name}: User interface overlay
+        \textit{Type}: Component\\
+        \textit{Purpose}: The user interface will be overlayed on top of the data display. This interface provides
+        the user with information about the current dataset, as well as pre-set actions and transformations on the 
+        3D data for the user. While not integral for the main goal of this project to work, this componenet provides
+        useful tools that enable the user to more effectively perform research on their data.
+
 \subsection{Structure Viewpoint}
+
+
 \subsubsection{Design Concerns}
 \subsubsection{Design Elements}
 
