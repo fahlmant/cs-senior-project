@@ -16,6 +16,6 @@
 \contentsline {subsection}{\numberline {3.4}Structure Viewpoint}{5}
 \contentsline {subsubsection}{\numberline {3.4.1}Design Concerns}{5}
 \contentsline {subsubsection}{\numberline {3.4.2}Design Elements}{5}
-\contentsline {subsection}{\numberline {3.5}Interaction Viewpoint}{5}
+\contentsline {subsection}{\numberline {3.5}Interaction Viewpoint}{6}
 \contentsline {subsubsection}{\numberline {3.5.1}Design Concerns}{6}
 \contentsline {subsubsection}{\numberline {3.5.2}Design Elements}{6}

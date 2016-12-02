@@ -195,16 +195,16 @@ input from some input device.
 
 \subsubsection{Design Elements}
 
-\textit{Name}: OVSR and point-cloud software
-\textit{Type}: Connector
+\textit{Name}: OVSR and point-cloud software\\
+\textit{Type}: Connector\\
 \textit{Purpose}: The connection between these two componenets is the essence of the project. Once these two can interface,
 the rest of the project can be built upon it. This connection is some kind of change in the code of point-cloud software
 to enable the use of the OSVR framework within it, or a external plug-in that achieves the same goal. The OSVR framework
 by its nature will then enable the display device to interact with the point-cloud software.\\
 \newline
 
-\textit{Name}: User interface and rendering of the dataset
-\textit{Type}: Interface
+\textit{Name}: User interface and rendering of the dataset\\
+\textit{Type}: Interface\\
 \textit{Purpose}: There must be some way for the dataset to be manipulated in a traditional software way, with various
 buttons and data-analyzing readouts for the user. This user interface will lay on top of the data, so that while the user
 looks at the data, they can easily find the button or other selection they are looking for. Even though this will be in
@@ -213,8 +213,8 @@ While the specific interactions are not specified, the user interface will at en
 action possible on the 3D data set.\\
 \newline
 
-\textit{Name}: Input device and point-cloud software
-\textit{Type}: Interface
+\textit{Name}: Input device and point-cloud software\\
+\textit{Type}: Interface\\
 \textit{Purpose}: The interface between the input device and the user interface is a given, but a necessity. The user should
 be able to use an input device to select everything within the userinterface, as well as select certain cross sections of the
 data itself. The input device will most likely already be enabled within the OSVR, or will work with OSVR once it is enabled
