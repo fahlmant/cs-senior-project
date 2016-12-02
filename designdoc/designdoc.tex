@@ -117,8 +117,27 @@ Matt O'Banion - For use in geo-informatics
 \subsubsection{Design Elements}
 
 \subsection{Interaction Viewpoint}
+
+Noctilucent VR will have six primary interactions.
+The first interaction is between the cloud viewing software and the GPU.
+The second interaction is between the GPU and the VR Software/Headset.
+The third interaction is between the user and the auxillery device.
+The fourth interaction is between the auxilery device and the cloud viewing software.
+The fifth interaction is between the user and the UI.
+The last ineraction is between the UI and the cloud viewing software
+
 \subsubsection{Design Concerns}
+
+When the user interacts with the auxilery device the actions they perform must be registed by the cloud viewing software and by the gpu. 
+That is, when an action is performed with the auxillery device, that action must be viewable in the headset as it happened.
+Additionally, any action that alters or edits the data must also be registered by the cloud viewing software.
+
+When the user interacts with the UI these actions should be registered by the cloud viewing software.
+As with the auxillery device, any action performed by the UI must be registered by the cloud viewing software so that the data can be saved and viewed again later.
+
 \subsubsection{Design Elements}
+
+The user, the user interface, the cloud viewing software, the graphics processing unit, the vr headset, and the auxillery device.
 
 \subsection{Design Rationale}
 
