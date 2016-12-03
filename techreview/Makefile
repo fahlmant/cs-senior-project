@@ -20,6 +20,8 @@ clean:
 	rm *.dvi
 	rm *.ps
 	rm *.aux
+	rm *.bbl
+	rm *.blg
 
 cleanpdf:
 	rm *.pdf

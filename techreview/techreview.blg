@@ -1,70 +1,71 @@
-This is BibTeX, Version 0.99d (TeX Live 2016/Arch Linux)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99c (Web2C 7.5.6)
 The top-level auxiliary file: techreview.aux
 The style file: ieeetr.bst
 Database file #1: techreview.bib
 Warning--entry type for "oculushardware" isn't style-file defined
 --line 1 of file techreview.bib
-Warning--entry type for "riftinfo" isn't style-file defined
+Warning--entry type for "geforce" isn't style-file defined
 --line 9 of file techreview.bib
+Warning--entry type for "riftinfo" isn't style-file defined
+--line 17 of file techreview.bib
 Warning--entry type for "sensicsosvr" isn't style-file defined
---line 16 of file techreview.bib
+--line 24 of file techreview.bib
 Warning--entry type for "vivehardware" isn't style-file defined
---line 23 of file techreview.bib
+--line 31 of file techreview.bib
 Warning--entry type for "osvrhardware" isn't style-file defined
---line 30 of file techreview.bib
+--line 38 of file techreview.bib
 Warning--entry type for "wiibrew" isn't style-file defined
---line 37 of file techreview.bib
+--line 45 of file techreview.bib
 Warning--entry type for "leaphardware" isn't style-file defined
---line 44 of file techreview.bib
+--line 52 of file techreview.bib
 Warning--entry type for "osvrsoft" isn't style-file defined
---line 51 of file techreview.bib
+--line 59 of file techreview.bib
 Warning--entry type for "oculussoft" isn't style-file defined
---line 58 of file techreview.bib
+--line 66 of file techreview.bib
 Warning--entry type for "htcsoft" isn't style-file defined
---line 65 of file techreview.bib
+--line 73 of file techreview.bib
 Warning--entry type for "qtsoft" isn't style-file defined
---line 72 of file techreview.bib
+--line 80 of file techreview.bib
 Warning--entry type for "htmlcssjs" isn't style-file defined
---line 79 of file techreview.bib
+--line 87 of file techreview.bib
 Warning--entry type for "gtksoft" isn't style-file defined
---line 86 of file techreview.bib
+--line 94 of file techreview.bib
 Warning--entry type for "cloudcompare" isn't style-file defined
---line 93 of file techreview.bib
+--line 101 of file techreview.bib
 Warning--entry type for "potree" isn't style-file defined
---line 100 of file techreview.bib
+--line 108 of file techreview.bib
 Warning--entry type for "lidarviewer" isn't style-file defined
---line 107 of file techreview.bib
-You've used 16 entries,
+--line 115 of file techreview.bib
+You've used 17 entries,
             1876 wiz_defined-function locations,
-            520 strings with 4003 characters,
-and the built_in function-call counts, 1873 in all, are:
-= -- 131
-> -- 68
+            523 strings with 4035 characters,
+and the built_in function-call counts, 1994 in all, are:
+= -- 141
+> -- 72
 < -- 0
-+ -- 33
-- -- 17
-* -- 53
-:= -- 258
-add.period$ -- 1
-call.type$ -- 16
-change.case$ -- 16
++ -- 35
+- -- 18
+* -- 57
+:= -- 275
+add.period$ -- 2
+call.type$ -- 17
+change.case$ -- 17
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 64
-empty$ -- 289
-format.name$ -- 17
-if$ -- 471
+cite$ -- 17
+duplicate$ -- 68
+empty$ -- 307
+format.name$ -- 18
+if$ -- 502
 int.to.chr$ -- 0
-int.to.str$ -- 16
+int.to.str$ -- 17
 missing$ -- 0
-newline$ -- 51
-num.names$ -- 16
-pop$ -- 82
+newline$ -- 54
+num.names$ -- 17
+pop$ -- 89
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 124
+skip$ -- 128
 stack$ -- 0
 substring$ -- 0
 swap$ -- 0
@@ -73,7 +74,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 16
-width$ -- 18
-write$ -- 99
-(There were 16 warnings)
+while$ -- 17
+width$ -- 19
+write$ -- 106
+(There were 17 warnings)
