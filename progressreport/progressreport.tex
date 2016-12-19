@@ -1,0 +1,132 @@
+\documentclass{article}
+
+\newcommand{\namesigdate}[2][5cm]{%
+  \begin{tabular}{@{}p{#1}@{}}
+    #2 \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Signature}} \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Date}}
+  \end{tabular}
+}
+
+\usepackage[T1]{fontenc}
+\usepackage[letterpaper, portrait, margin=0.75in]{geometry}
+\usepackage[singlespacing]{setspace}
+\usepackage{url}
+\usepackage{tocloft}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{pgfgantt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\title {Progress Report for Noctilucent VR}
+\author {Taylor Fahlman, Joshua Bowen, Adam Puckette}
+
+\maketitle
+
+\section{Project Recap}
+
+Noctilucent VR will allow users to view and manipulate point-cloud data in virtual reality. 
+It will be a free and open source software solution that draws upon several existing open source frameworks in order to display point cloud data via most virtual reality headsets. 
+In addition, Noctilucent VR will accept user in order to measure and manipulate the point-cloud data from within the virtual reality environment. 
+Our goals for Noctilucent VR are as follows:
+
+\begin{enumerate}
+\item To run on the Windows operating system
+\item To display point-cloud data in a wide range of virtual reality headsets
+\item To allow the measurement and manipulation of said data in real time
+\item To display said data at a framerate and detail level suitable for virtual reality
+\end{enumerate}
+
+\section{Project Status}
+
+As of the end of Fall Term, Noctilucent VR has barely begun. 
+We have checked and re-checked our design, and picked out the software frameworks that work best for the intended use of our project. 
+With any luck, we will begin Winter Term prepared to start on the project without further delay. 
+Our current choice of point-cloud viewing software is CloudCompare, though this may change in future depending on our needs. 
+Potree Viewer is an attractive alternative, but we will not know which suits our needs more until we do a closer examination next term. 
+OSVR is currently our virtual reality solution of choice, and barring any unforeseen developments in technology, it will remain ideal to our purposes. 
+Our current status is: highly prepared.
+
+\section{Problems}
+
+As work has not yet begun we have not yet run into any problems, however there are some potential problems on the horizon that will need to be addressed.
+The main problem that we forsee in the future is whether or not CloudCompare will be capable of rendering large point clouds in VR.
+Several other people who have attempted a similair project with cloud compare have found that CloudCompare showed stress and rendering issues with VR.
+Because of this issue we will need to put time into figuring out if CloudCompare is even capable of handling this project.
+In the event that CloudCompare is incapable of handling this issue we will need to do one or two things.
+The first option is we implement Octree datastructures in CloudCompare.
+This solution could work as other, not Open Source, cloud viewing softwares utilize Octrees and have superior performance.
+The problem with this solution is that it could be timely.
+An alternate solution is to create an auxillery program that operates seperately from CloudCompare.
+Ideally neither of these approaches will be neccessary but it is something that we need to think about.
+
+\section{Weekly Activity Summary}
+\subsection{Week 3}
+
+On our first week, we met our client (Matt O'Banion) and were introduced to the project and its goals. 
+We viewed the current setup, and discussed what the end result would look like. We set up weekly meetings at a time that worked for all of us (1400 on Tuesdays), and have stuck to that time since. 
+We were introduced to an issue that may come up to plague us later, namely that CloudCompare may not be capable of rendering large-scale point clouds at a framerate that works for VR. 
+CloudCompare's creator offered to work with us to remedy this issue, so we shall see.
+
+\subsection{Week 4}
+
+Nothing whatsoever of note occurred this week, aside from writing an abstract for our project and brainstorming good names. 
+We had a slight scheduling hiccup near the week's end, but we addressed it and do not anticipate more problems in future. 
+Mr. O'Banion was out-of-town this week, so we decided not to meet.
+
+\subsection{Week 5}
+
+We began writing the Requirements Document this week, and met with Mr. O'Banion to discuss a schedule of deliverables for the term and align our schedules with his. 
+We learned of several alternatives to the proposed software frameworks that we could use if necessary.
+
+\subsection{Week 6}
+
+Once we had finished interpreting the IEEE-1998 standard, we were able to finish up the Requirements Document and planned to start in on the Technology Review on week 7. 
+The testing setup in the Geomantics lab began acting up when we tried to get the positional tracking camera to work with it.
+
+\subsection{Week 7}
+
+We divided up roles for the Technology Review, and researched our alternatives throughout most of the week. 
+Mr. O'Banion was quite helpful, and pointed out a number of lesser-known and in-development programs that we probably would not have found otherwise. 
+Once the Technology Review was submitted, we began deciphering the IEEE-1016-2009 standard. 
+It took nearly twice as long to interpret as the IEEE-1998 standard, as it was quite a bit longer and had a number of extraneous sections that needed to be weeded out. 
+
+\subsection{Week 8}
+
+We laid an outline of the Design Document this week, and set up the required section headers. 
+I managed to isolate the IR tracking issue and confirm that the hardware was not at fault.
+
+\subsection{Week 9}
+
+This week Mr. O'Banion left for New Zealand to run Lidar scans on the results of the recent earthquake, and that combined with the long Thanksgiving weekend meant that very little got done.
+
+\subsection{Week 10}
+
+We finished up the Design Document at long last. The actual writing took very little time at all, once we knew what we were doing. 
+Mr. O'Banion was still in New Zealand, and was unavailable to sign the Design Document. 
+We began the Progress report on Friday, eager to be done for the term.
+
+\section{Retrospective}
+
+\begin{table}[ht]
+\caption{Noctilucent VR Retrospective}
+\centering
+\begin{tabular}{l l l}
+\hline\hline
+Positives & Deltas & Actions \\ [0.5ex]
+\hline
+Made clean problem statement & Get practice with OSVR & Finish OSVR Demo \\
+GitHub set up & & \\
+Decided on requirements & & \\
+Decided on technologies used & & \\
+Created design for future &  & \\
+Met with client weekly & & \\
+Experienced the current setup of 3D TV & & \\
+Experienced OSVR headset with small demo & & \\
+Divided the project into parts & & \\ [1ex]
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
