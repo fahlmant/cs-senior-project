@@ -363,6 +363,7 @@ Two, supported file formats. For greater ease of use and adaptability, the softw
 \subsubsection{CloudCompare}
 CloudCompare is well-supported and widely used software that runs on Windows, Mac OS, and Linux \cite{cloudcompare}.
 It has a large number of built-in tools for evaluation and manipulation of point-cloud data, and accepts over 15 file types, including BIN, ASCII, PLY, OBJ, VTK, STL, E57, LAS, PCD, FBX, SHP, OFF, PTX, FLS/FWS, and DP. 
+A plugin has already been created to add support for the Oculus Rift DK2, and we could use much of this code as an example of how this could be done for OSVR. 
 In addition, the software supports third-party plugins, something that we could use to create a VR mode. 
 
 \subsubsection{PotreeViewer}
@@ -370,6 +371,7 @@ Potree Viewer is a relatively recently developed project that uses WebGL to view
 It is Windows-only for the moment, and only works with a specialized file format called octree. 
 This file format stores point-cloud data as a single sparse root node with a directory structure of child nodes beneath it. 
 Potree Viewer has fewer built-in tools for point-cloud manipulation, but may perform better than CloudCompare on similar hardware. 
+One concern with Potree Viewer is that the hassle of creating a remote server to host the actual data file could cause more issues than it would solve, and a local solution would serve us better.
 
 \subsubsection{LidarViewer}
 LidarViewer is the existing software used for the 3D TV setup. It has the advantage of already being designed for VR, but is hampered by being Linux-only \cite{lidarviewer}.
