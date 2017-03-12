@@ -109,6 +109,16 @@
 		
 		</ul>
 	  </div>
+
+	  <h3>VR (Experimental)</h3>
+      <div>
+        <ul class="pv-menu-list">
+          <li>
+		  	<label><input type="checkbox" onClick="viewer.setVirtualReality(this.checked)"/>&nbsp;virtual reality</label>
+		  </li>
+        </ul>
+  	  </div> 
+
 	  <h3>About</h3>
 	  <div>
 		<ul class="pv-menu-list">
@@ -153,11 +163,6 @@
 		
 		</ul>
 	  </div>
-      <h3>VR</h3>
-      <div>
-      <ul class="pv-menu-list">
-          <li><a target="_blank" >Start VR</a></li>
-      </ul>
       </li>
 	  <!--
 	  <h3>Help</h3>
@@ -1090,6 +1095,8 @@ initSettings = function(){
 		}
 	});
 };
+
+
 
 
 $(document).ready( function() {

@@ -11273,13 +11273,30 @@ Potree.Viewer = function(domElement, args){
 		if(scope.showBoundingBox !== value){
 			scope.showBoundingBox = value;
 			scope.dispatchEvent({"type": "show_boundingbox_changed", "viewer": scope});
+			console.log("Sent BB Change");
 		}
 	};
 	
 	this.getShowBoundingBox = function(){
 		return scope.showBoundingBox;
 	};
-	
+
+	//VR CODE STARTS HERE
+
+	this.setVirtualReality = function(value){
+		if(scope.virtualReality !== value){
+			scope.virtualReality = value;
+			scope.dispatchEvent({"type": "virtualreality_changed", "viewer": scope});
+			console.log("Sent VR Change");
+		}
+	};
+
+	this.getVirtualReality = function(){
+		return scope.virtualReality;
+	};
+
+	//VR CODE ENDS HERE
+
 	this.setMoveSpeed = function(value){
 		if(scope.moveSpeed !== value){
 			scope.moveSpeed = value;
