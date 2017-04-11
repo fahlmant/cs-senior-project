@@ -47,7 +47,8 @@
         "bottom_lock": "Keep above ground",
         "box": "Box",
         "freeze": "Lock view",
-        "language": "Language"
+        "language": "Language",
+		"vr": "Enable VR"
     },
     "profile": {
         "nb_points": "Point number",
