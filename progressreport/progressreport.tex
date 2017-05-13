@@ -60,6 +60,12 @@ To accomplish this task we are planning to take an existing OpenGL VR program an
 Additionally to this, we are also working on modifying the Oculus VR support that exists inside of Cloud Compare to be more robust and support OSVR.
 On top of that we are also looking into WebGL as a potential alternative to Cloud Compare.
 
+\subsubsection{Spring Term: Week 6}
+
+As of Week 5 of Spring term, Noctilucent VR has been completed in time for the Engineering Expo. 
+We have created a virtual-reality extension for Potree Viewer that displays the data in a stereoscopic 3D view. 
+We are working on adding head tracking and orientation for the OSVR HDK, but the software currently supports the Google Cardboard. 
+
 \section{Problems}
 
 \subsubsection{Fall Term}
@@ -81,6 +87,14 @@ As was mentioned in the Winter Term Week 6 section, we are run into a couple iss
 Unfortunately VR is a very poorly documented field, this includes peopels custom made demos.
 The demo's people have made require a number of dependencies to actually work, but the process of installing them all and just trying to get everything to work is proving quite troublesome.
 At this point we really just need to move on from this demo because it's sucking up a ton of time and we could be doing something better elsewhere.
+
+\subsubsection{Spring Term: Week 6}
+
+Our only problems this term were in finishing our plugin before the code freeze of week 4. 
+We still have some problems getting Potree Viewer to display in the OSVR HDK, but that is a problem on the OSVR end, and one we plan to address. 
+Other than this, there is a minor visual glitch in the current release of Potree viewer that causes an odd vibration of the data set. 
+This could cause nausea, but it is nothing we can address, as the problem is with Potree Viewer itself. 
+It was never a problem with previous versions, so it will most likely be fixed in the next release. 
 
 \section{Weekly Activity Summary}
 \subsection{Fall Week 3}
@@ -165,6 +179,59 @@ There was a family emergency this week and one of our members needed to go home,
 
 This week we continued trying to get something to compile.
 We also worked on our Progress Report, Revisions, and Presentation.
+
+\subsection{Winter Week 7}
+
+After consultation with our client, we chose to switch the focus of our project from CloudCompare to Potree Viewer. 
+It required another switch in focus, to WebGL. 
+We committed to developing a virtual reality plugin for Potree Viewer using the experimental WebVR API.
+
+\subsection{Winter Week 8}
+
+This week we familiarized ourselves with WebVR and discovered an essential file named three.js. 
+Getting this file to work with Potree Viewer soon became our highest priority.
+
+\subsection{Winter Week 9}
+
+We finally got around to removing the CloudCompare fork from our Github this week, and continued working with three.js to create a VR mode for Potree Viewer that could be activated at the press of a button.
+
+\subsection{Winter Week 10}
+
+After several promising starts, we ended up having to reset to square one this week. 
+Problems with version conflicts led to us to move to a completely different version of three.js and switch between several different browsers.
+
+\subsection{Winter Week 11}
+
+This week we took to finish up our documentation before the break. We met several times to record for the final presentation.
+
+\subsection{Spring Week 1}
+
+In the first week of Spring we focused on getting the viewer component of Potree Viewer working in the headset. 
+Taylor was in Canada this week, so we were a man short.
+
+\subsection{Spring Week 2}
+
+The logistics of expo was this week’s concern. 
+We realized that it would not be possible to run a VR demo at expo due to H&S concerns, and scaled back our plans.
+
+\subsection{Spring Week 3}
+
+We debated taking an Incomplete grade this week, and decided that if we couldn’t get the project working over the weekend we would ask for one. 
+Fortunately for us, we were able to get it working in a limited state over the weekend.
+
+\subsection{Spring Week 4}
+
+We managed to get our demo to the state where it satisfies most of what we set forth in our Requirements document in Fall term. 
+We added a README and further documentation before the code freeze.
+
+\subsection{Spring Week 5}
+
+This week we spent trying to get the code working for OSVR specifically, but we weren’t sure whether it was our code or OSVR that was failing. 
+We were unsuccessful this week, but not for lack of trying.
+
+\subsection{Spring Week 6}
+
+This week we spent on documentation, recording for our midterm presentation and writing this.
 
 \section{Retrospective}
 
