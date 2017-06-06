@@ -612,6 +612,43 @@ If we don't get it finished, then the OSVR part of the project still needs work.
 
 \section{Project Documentation}
 
+Noctilucent VR combines Potree Viewer with WebVR to enable stereoscopic and VR view of point cloud data. 
+This project is capable of rendering point clouds of several million points at a stable framerate in any compatable VR headset. 
+Lidar point clouds are a collection of points that are collected by bouncing light off objects to determine its position in 3D space. 
+They are used in surveying, disaster recovery, and the archiving of historical monuments.
+
+The plugin works by altering the viewer component of Potree Viewer. 
+The program already makes use of a file named three.js, and this file has support for WebVR built in. 
+At its heart, all this plugin does is call upon those built-in functions to render the viewer in stereoscopic 3D. 
+In addition we have added a checkbox and a button to Potree Viewer's GUI component that allows the user to switch between normal 2D and 3D VR mode in real-time.
+
+With an OSVR-compatible device:
+
+\begin{enumerate}
+  \item Download the following Chromium zip and unpack it: https://drive.google.com/file/d/0BzudLt22BqGRRlVjSUZpV3ZsVzA/view?usp=drive_web
+  \item Select the "Enabled" option from the drop-down menu for the "Enable WebVR" flag (enter chrome://flags/#enable-webvr in the URL bar) and the "Gamepad Extensions" flag (enter chrome://flags/#enable-gamepad-extensions in the URL bar), or launch Chromium from the command line with the --enable-webvr and --enable-gamepad-extensions flags.
+  \item Download the latest OSVR runtime installer (found at: http://access.osvr.com/binary/osvr-runtime-installer), and set up your HDK. Run VideoTrackerCalibrationUtility.exe to calibrate your headset. Don't forget to start the OSVR server before attempting to use your headset.
+  \item Download Steam (found at: http://store.steampowered.com/about/). Go to Tools and download SteamVR.
+  \item Download and install the OSVR-SteamVR experimental drivers found at: https://github.com/OSVR/SteamVR-OSVR. Don't forget to add the [OSVR] tag to drivers.cfg in the %ProgramFiles(x86)%\Steam\steamapps\common\SteamVR\drivers\ directory.
+  \item Use some webserver (i.e. Apache, XAMPP, etc.) to server the VR site
+  \item Visit index.html, expand the sidebar, and select Other Settings > Enable VR
+  \item At the bottom of the page, select Start VR
+  \item Use your headset to view the point-cloud
+\end{enumerate}
+
+Without device:
+
+\begin{enumerate}
+  \item Follow steps 1 and 2 above
+  \item Install the following Chrome extension https://chrome.google.com/webstore/detail/webvr-api-emulation/gbdnpaebafagioggnhkacnaaahpiefil?hl=en
+  \item Follow steps 4 through 6 above
+  \item Your display in your browser should now be in stereoscopic view.
+\end{enumerate}
+
+Currently, Noctilucent VR supports the Windows and Linux operating systems and works on most hardware capable of running the Chrome browser. 
+For the best experience we recommend a graphics card equal or greater in power to a nVidia GeForce GTX 970. 
+Anything lower spec and you may experience slowdowns which can be disorienting or even sickening in VR. 
+
 \section{New Technology}
 
 \section{Lessons Learned}
