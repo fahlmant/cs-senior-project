@@ -1,0 +1,198 @@
+\documentclass{article}
+
+\newcommand{\namesigdate}[2][5cm]{%
+  \begin{tabular}{@{}p{#1}@{}}
+    #2 \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Signature}} \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Date}}
+  \end{tabular}
+}
+
+\usepackage[T1]{fontenc}
+\usepackage[letterpaper, portrait, margin=0.75in]{geometry}
+\usepackage[singlespacing]{setspace}
+\usepackage{url}
+\usepackage{tocloft}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{pgfgantt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\title {Requirements for Noctilucent VR}
+\author {Taylor Fahlman, Joshua Bowen, Adam Puckette}
+
+\maketitle
+
+\abstract
+There are 4 main deliverables for this project. Creating an OpenGL test for the OSVR framework;
+writing a proposal to either use CloudCompare or another software; a simple documentation/summary of
+the final product; and the final product, where an OSVR headset can interact with the software.
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+\section{Introduction}
+\subsection{Purpose}
+
+The purpose of this addon is to allow any user of the open source software CloudCompare to be able to view point cloud data in Virtual Reality.
+The user, however, must be in possession of some Virtual Reality headset.
+In this regard this project is designed for anyone who utilizes CloudCompare for it's open source cloud data viewing capabilities,
+and is looking for a more immersive analysis of data.
+
+\subsection{Scope}
+
+Noctilucent VR will function as an extension or addon of the already existent open source software CloudCompare.
+When utilized, the software will take the point cloud data as rendered by CloudCompare and display it in a fashion suitable for virtual reality.
+The software will render and update the display of the data in at least 30 Frames Per Second at a consistent rate.
+An Auxillery device will also be useable to navigate the data.
+Benefits of the software include the viewing of point cloud data in a more immersive enviroment.
+While viewing the data the software should not freeze or stutter and should draw complete scenes. 
+Additionally the software must render at least a million point, ideally more.
+As point cloud data often contain millions of points it is important that this software is able to render as many points as possible.
+
+\subsection{Definitions}
+
+Free and Open Source Software: Also known as FOSS, is any software that can be classified as both free software and open source software. This means that anyone is freely licensed to modify, copy, or study the code as they see fit. 
+Users are encouraged to improve the software and share their work with others.
+
+Virtual Reality: Also referred to as VR, is an existing technology which allows the user to put on a headset and have an immersive experience in which turning your head turns the camera and moving your head moves the camera.
+Additionally, visuals are rendered seperatly for both eyes allowing for different perspectives which when put together create a 3D steroscopic environment.
+
+CloudCompare: Also referred to as CC, is a FOSS program freely available to users who need to view and analyze point cloud data.
+
+Open Source Virtual Reality: Also referred to as OSVR, is an existing Open Source VR headset and VR software platform. OSVR is designed so that it can be developed on and modified by the the public at only the cost of the headwear.
+
+Oculus Developers Kit 2: Also called the DK2, is another existing VR headset, however it is not open source and has since been replaced with a standard production model.
+
+Graphics Processing Unit: Referred to as a GPU, is the piece of hardware inside of a computer responsible for performing microprocesses often associated with graphics rendering or deep learning.
+
+Frames Per Second: Called FPS, is the refresh rate at which the computer draws a scene over the course of a second.
+
+\subsection{References}
+
+The following links are our references:
+  http://www.danielgm.net/cc/
+  http://www.osvr.org/
+
+\subsection{Overview}
+
+The user of selected software will be able to plug in an OSVR-supported headset and view their point cloud data in a 3D VR view.
+They will be able to examine and manipulate the data in 3D space. 
+They will be able to rotate and zoom, crop, etc. large data sets at a frame rate of at least 30 FPS with a stable FPS.
+A stable FPS is an FPS that is within plus or minus 5 FPS of the average FPS over a 5 second period.
+The software should not freeze for longer than half a second more than 3 times over 5 seconds.
+Additionally, freezes longer than 2 seconds at any point must be avoided.
+All renderings should not experience screen tearing more than once every 3 seconds.
+At least a million points of cloud data must be able to be rendered while meeting all these requirements.
+
+\section{Overall Desciption}
+\subsection{Product Perspective}
+
+\subsubsection{User Interfaces}
+
+Noctilucent VR will make a mild modification to the current CloudCompare interface by adding an option to activate VR mode. 
+When activated CC will begin rendering data for VR instead of for a monitor.
+When in VR mode, CC will utilize a different interace from the default version.
+The new user interface will be designed with VR in mind and will only appear at the need of the user upon the push of a button.
+The VR Interface will include functionality to easily navigate the data and mark areas of interest.
+
+\subsubsection{Hardware Interfaces}
+
+Noctilucent VR will interface with the GPU of the computer to render graphics.
+The software will also utilizie some VR Headset, with the main target being the
+OSVR Headset, and the Oculus Rift Headset as a secondary goal.
+
+\subsubsection{Software Interfaces}
+
+Name: CloudCompare
+Mnemonic: CC
+Specification Number:
+Version Number: 2.7
+Source.
+
+CloudCompare will be the software that handles the actual analysis and input of the cloud data information. 
+In relation to our software product we will take what exists already with CloudCompare and add the ability for the software to render the data for VR.
+
+\subsection{Product Functions}
+
+Noctilucent VRs Functions are as follows
+
+%\item Render point cloud data in virtual reality
+%\item Provide an interface to interact with data
+\begin{enumerate}
+\item Render point cloud data in virtual reality
+\item Provide an interface to interact with data
+\end{enumerate}
+
+\subsection{User Characteristics}
+
+Someone using this software is expected to already be familiar with point cloud data and softwares used to navigate it. 
+Familiarity with CloudCompare is expected before jumping into the VR aspects of it.
+This might be a users first experience with VR if they purchased it for this purpose.
+
+\subsection{Constraints}
+
+The possible constraints mostly rely in the way CC uses OpenGL. There have been repoted issues with the software in which
+stuttering was found with larger data sets. With this possible limitation already present in 2D view, enabling 3D support would
+likely make the situation worse. However, the lead developer has stated he will help in this case, and some of these problems 
+may be able to be fixed. In the case that theses cannot be fixed, there is also a linux-only research program which can be used
+instead that already supports 3D steroscopic viewing.
+
+\subsection{Assumptions and Dependencies}
+
+It is our assumption that CC will be capable of rendering a million or more points of cloud data in realtime.
+In the event that CC is not capable of such we will need to considering creating a seperate software instead of an extension.
+
+\section{Specific Requirements}
+
+Specifically, an OpenGL program written to test the OSVR framework will be needed. This will simply involve an OBJ viewer in OpenGL,
+and some 3D OBJ file to view. 
+
+Reasearch will be needed on the constraints of OpenGL. Specifically, the viability of CC as the medium of delivery will need to be
+assesed. A comparison against the research linux-based software will be included in this reasearch.
+
+Once a solution is decided on, documentation of the implementation will be written. This will address what parts of
+the architechture was needed to implement this change, as well as setting and other relevant information for future developers
+and users of the final product. 
+
+Finally, either a plugin or change to the core code will need to be written and presented to the client, as well as the reposity or
+stakeholder of the software we choose. The ideal situation is that the finally product would be integrated into the core of the 
+software. However, an external plugin would suffice. 
+
+\newpage
+%Gantt chart
+\begin{ganttchart}[
+        hgrid=true,
+        vgrid={*{10}{blue, dashed}},
+        y unit chart=0.75cm,
+        x unit=0.75cm
+    ]{1}{13}
+    \gantttitle{Senior Project 2016-2017}{13} \\
+    \gantttitlelist{4, 6, 8, 10, 2, 4, 6, 8, 10, 2, 4, 6, 8}{1} \\
+    \ganttgroup{Documentation}{1}{4}\\
+    \ganttbar[progress=100]{Problem Statemenet}{1}{2}\\
+    \ganttbar[progress=50]{Requirements Document}{1}{3}\\
+    \ganttbar[progress=0]{Technical Review}{2}{4}\\
+    \ganttbar[progress=0]{Design Document}{2}{4}\\
+    \ganttgroup{Implementation}{1}{12}\\
+    \ganttbar[progress=0]{OpenGL OSVR Harness}{1}{4}\\
+    \ganttbar[progress=0]{Research on Software}{4}{7}\\
+    \ganttbar[progress=0]{Documentation}{7}{12}\\
+    \ganttbar[progress=0]{Integration of OSVR and Software}{7}{12}\\
+    \ganttgroup{Presentation}{8}{13}\\
+    \ganttbar[progress=0]{Presentation Board}{10}{13}\\
+    \ganttbar[progress=0]{Expo Setup}{10}{13}\\
+\end{ganttchart}
+\newpage
+\vspace{2pc}
+
+\noindent \namesigdate{Matt O'Banion} \hfill \namesigdate[3cm]{Adam Puckette}
+
+\vspace{2pc}
+
+\noindent \namesigdate{Taylor Fahlman} \hfill \namesigdate[3cm]{Joshua Bowen}
+
+\end{document}
+
