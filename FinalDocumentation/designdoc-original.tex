@@ -1,0 +1,273 @@
+\documentclass{article}
+
+\newcommand{\namesigdate}[2][5cm]{%
+  \begin{tabular}{@{}p{#1}@{}}
+    #2 \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Signature}} \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Date}}
+  \end{tabular}
+}
+
+\usepackage[T1]{fontenc}
+\usepackage[letterpaper, portrait, margin=0.75in]{geometry}
+\usepackage[singlespacing]{setspace}
+\usepackage{url}
+\usepackage{tocloft}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{pgfgantt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\title {Design Document for Noctilucent VR}
+\author {Taylor Fahlman, Joshua Bowen, Adam Puckette}
+
+\maketitle
+
+\abstract
+
+Noctilucent VR will allow users to view and manipulate point-cloud data in virtual reality. 
+The required concepts, terminologies, design viewpoints, and use methodologies for Noctilucent VR are described herein. 
+Noctilucent VR will be created by integrating an existing open source point-cloud viewing program with the OSVR framework. 
+This will allow us to create modular and platform-independent software. 
+With Noctilucent VR, anyone with a virtual reality headset will be able to download and view point-cloud data without needing specialized hardware.
+
+\newpage
+\thispagestyle{empty}
+
+\tableofcontents
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+\section{Overview}
+\subsection{Scope}
+
+This document describes the software design and information regarding the Virtual Reality Lidar Point Cloud Viewing Software known as Noctilucent VR.
+This software is intended to be used by professionals seeking to improve their Lidar Cloud viewing experience.
+Uses can include anything from casual cloud data viewing to professional informatics.
+
+Noctilucent and it's design can be used on any computer capable of handling the graphics rendering.
+This projects only applicability restriction is in the capabilities of the computer running it.
+
+\subsection{Purpose}
+
+Noctilucent VR exists to expand the current capabilities of humans to view Lidar Cloud data.
+Specifically the goal of this project is to take 3D information previously displayed in 2D and provide an easy to use, easily accessible, Open Source alternative to viewing this data which allows for it's viewing in 3D.
+This project exists as viewing 3D data in 3D is an important aspect of being able to garner easily all the information from that data as possible.
+
+\subsection{Intended Audience}
+
+This project is primarily intended to be used by scientists, engineers, and those who perform informatics, however, the project is not limited to those audiences.
+The Free and Open Source nature of this project allows it's use by anyone with access to cloud compare, a virtual reality headset, a wiimote, and a computer capable of running this software.
+
+\subsection{Conformance}
+
+Noctilucent VR conforms to this document if it satisfies the requirements as they are outlined in Sections 4 and 5 of this Document. Requirements are denoted by the verb shall.
+
+\section{Definitions}
+
+{\parindent0pt
+\textbf{Free and Open Source Software (FOSS)}\\
+
+Any software that can be classified as both free software and open source software.
+This means that anyone is freely licensed to modify, copy, or stufy the code as they see fit.
+Users are encouraged to improve the software and share their work with others.\\
+
+\textbf{Virtual Reality (VR)}\\
+
+An Existing technology which allows the user to put ona headset and have an immersive experience in which turning your  head turns the camera and mmoving your head moves the camera.
+Visuals are rendered seperately for both eyes allowing for different perspectives which come together to create a 3D stereoscopic environment.\\
+
+\textbf{CloudCompare (CC)}\\
+
+A FOSS program freely available to users who need to view and analyze point cloud data.\\
+
+\textbf{Open Source Virtual Reality (OSVR)}\\
+
+An existing Open Source VR Headset and VR Software platform.
+OSVR is designed so that it can be developed on and modified by the public at only the cost of the headwear.\\
+
+\textbf{Graphics Processing Unit (GPU)}\\
+
+The piece of hardware inside a computer responsible for performing microprosses often associated with graphics rendering or deep learning.\\
+
+\textbf{Frames Per Second (FPS)}\\
+
+The refresh rate at which the computer draws a scene over the course of a second.\\
+}
+
+\section{Design}
+
+\subsection{Stakeholders}
+
+Matt O'Banion - For use in geo-informatics
+
+\subsubsection{Design Concerns}
+
+\begin{itemize}
+ \item Shall have a user interface for interacting with the data
+ \item Shall utilize an auxillery device for ineracting with the data
+ \item Shall render at least million points of cloud data
+ \item Shall be usable by any Virtual Reality headware and framework
+ \item Shall interface with point-cloud viewing software
+\end{itemize}
+
+\subsection{Context Viewpoint}
+
+The context of a software project is the environment and systems with which it interacts. 
+These external elements are detailed below, along with a description of their interaction with our project and their responsibilities towards the user and each other. 
+This is a broad overview of elements outside the scope of Noctilucent VR that are required in order for the project to be successful. 
+
+\subsubsection{Design Concerns}
+
+\begin{enumerate}
+\item The user, who is responsible for providing positional data, orientation data, and manipulation data. 
+The user receives a graphical representation of the point-cloud data in return.
+\item The point-cloud viewing software, which is responsible for providing the graphical representation of the point cloud data as well as processing the manipulation data.
+\item The OSVR framework, which is responsible for processing the positional and orientation data.  
+\end{enumerate}
+
+\subsubsection{Design Elements}
+
+There are three external factors that form the design context for Noctilucent VR. 
+First there is the user, who will use our software to view and interact with point-cloud data in virtual reality. 
+Second there is the point-cloud viewing software, which will handle the rendering and manipulation of the point cloud data as directed by the user. 
+Finally, there is the OSVR virtual reality framework which will coordinate with the point-cloud viewing software to display the point-cloud data on the user’s virtual reality headset of choice. 
+These three elements form a triangle of interaction. 
+The user provides input in the form of positional tracking and orientation data to the OSVR framework, which in turn coordinates with the point-cloud viewing software to update the headset display. 
+The user also provides interaction data directly to the point-cloud viewing software to measure and manipulate the point-cloud data. 
+The point-cloud viewing software in turn updates the headset display of said measured and manipulated data via the OSVR framework.
+
+\subsection{Interface Viewpoint}
+
+The interface of Noctlilucent VR involves both hardware and a software componenets. 
+The harware component will allow the user to manipulate the dataset with physical actions,
+as well as view the dataset.
+The software component will allow the user to perform pre-set complex operations and manipulations
+with one selection. 
+
+\subsubsection{Design Concerns}
+\begin{enumerate}
+\item The display device will enable the user to view and more importantly, move around the data set
+    they are exploring.
+\item The input device will be used for data manipulation. The input from the device allows the user to interact and analyze the
+    data in a highly-controlled fashion.
+\item The User interface overlay will be used to manipulate the display of data, as well as peform similar actions to the physical device,
+    but pre-set so the user does not have to repeat these actions.
+\end{enumerate}
+\subsubsection{Design Elements}
+
+        \textit{Name}: Display device\\
+        \textit{Type}: Hardware unit\\
+        \textit{Purpose}: This device will enable the user to view the data they need to explore, specifically in steroscopic 3D. 
+        This device needs some sort of screen which enables the eyes to view the data in 3D. Most likely, a virtual reality headset
+        will be used, as it has the required screens and technology to display the information in the desired way.\\
+\newline
+        \textit{Name}: Input device
+        \textit{Type}: Hardware unit\\
+        \textit{purpose}: The input device is the primary way that the user will interact and manipulate the data viewed. 
+        The versatility of this device (or collection of devices if needed), is important, as there are many transformations
+        that are possible in a 3D environment. This device is also used to select options in the user interface.\\
+\newline
+        \textit{Name}: User interface overlay
+        \textit{Type}: Component\\
+        \textit{Purpose}: The user interface will be overlayed on top of the data display. This interface provides
+        the user with information about the current dataset, as well as pre-set actions and transformations on the 
+        3D data for the user. While not integral for the main goal of this project to work, this componenet provides
+        useful tools that enable the user to more effectively perform research on their data.
+
+\subsection{Structure Viewpoint}
+
+The structure of Noctilucent VR follows these constraints:
+The GPU of the computer is able to run and render points in the point-cloud rendering software
+The OSVR framework and the point-cloud rendering software are able to communicate with one another.
+The display device uses the OSVR framework to display the point-cloud data.
+The user interface is then rendered on top of the data.
+An input device is then enabled to interact with the UI.
+
+\subsubsection{Design Concerns}
+The most importat part of the project is the communication between OSVR and the point-clound rendering software.
+While the GPU part of the structure is below that, the rest of the project must only work if that communcation is working.
+Next, the headset must be able to use that link to render the data, then display the corrent user interface, and handle
+input from some input device.
+
+\subsubsection{Design Elements}
+
+\textit{Name}: OVSR and point-cloud software\\
+\textit{Type}: Connector\\
+\textit{Purpose}: The connection between these two componenets is the essence of the project. Once these two can interface,
+the rest of the project can be built upon it. This connection is some kind of change in the code of point-cloud software
+to enable the use of the OSVR framework within it, or a external plug-in that achieves the same goal. The OSVR framework
+by its nature will then enable the display device to interact with the point-cloud software.\\
+\newline
+
+\textit{Name}: User interface and rendering of the dataset\\
+\textit{Type}: Interface\\
+\textit{Purpose}: There must be some way for the dataset to be manipulated in a traditional software way, with various
+buttons and data-analyzing readouts for the user. This user interface will lay on top of the data, so that while the user
+looks at the data, they can easily find the button or other selection they are looking for. Even though this will be in
+steroscopic 3D, this will closely resemble 'traditional software' with ribbion bars at the top, like a word processor.
+While the specific interactions are not specified, the user interface will at enable the user to perform most any transform
+action possible on the 3D data set.\\
+\newline
+
+\textit{Name}: Input device and point-cloud software\\
+\textit{Type}: Interface\\
+\textit{Purpose}: The interface between the input device and the user interface is a given, but a necessity. The user should
+be able to use an input device to select everything within the userinterface, as well as select certain cross sections of the
+data itself. The input device will most likely already be enabled within the OSVR, or will work with OSVR once it is enabled
+in the point cloud software. The input device enables every possible action with this software, and thus needs to be extensively
+tested to ensure every desired action can be achieved with it.
+
+
+\subsection{Interaction Viewpoint}
+
+Noctilucent VR will have six primary interactions.
+The first interaction is between the cloud viewing software and the GPU.
+The second interaction is between the GPU and the VR Software/Headset.
+The third interaction is between the user and the auxiliary device.
+The fourth interaction is between the auxiliary device and the cloud viewing software.
+The fifth interaction is between the user and the UI.
+The last ineraction is between the UI and the cloud viewing software
+
+\subsubsection{Design Concerns}
+
+\begin{enumerate}
+	\item Interacting with the auxilery device updates the display and edits the data
+	\item Interacting with the UI updates the display and edits the data
+\end{enumerate}
+
+\subsubsection{Design Elements}
+
+		\textit{Name}: User Interface\\
+		\textit{Type}: Component\\
+		\textit{Purpose}: Allows the user to perform actions commonly performed to manipulate the data in the point cloud.\\
+\newline
+		\textit{Name}: Cloud Viewing Software\\
+		\textit{Type}: Component\\
+		\textit{Purpose}: Houses the data, and performs all the backend workd necessary to edit and view the point cloud.\\
+\newline
+		\textit{Name}: Graphics Processing Unit\\
+		\textit{Type}: Component\\
+		\textit{Purpose}: Responsible for rendering the point cloud data so that it can be viewed in Virtual Reality.\\
+\newline
+		\textit{Name}: Virtual Reality Headset\\
+		\textit{Type}: Component\\
+		\textit{Purpose}: Used by the user to view the cloud data as it is created by the GPU and the Cloud Viewing Software.\\
+\newline
+		\textit{Name}: Auxillery Device
+		\textit{Type}: Component\\
+		\textit{Purpose}: A device used by the user to edit, manipulate, and change views of the data without the need for a keyboard and mouse.
+
+\newpage
+\vspace{2pc}
+
+\noindent \namesigdate{Matt O'Banion} \hfill \namesigdate[3cm]{Adam Puckette}
+
+\vspace{2pc}
+
+\noindent \namesigdate{Taylor Fahlman} \hfill \namesigdate[3cm]{Joshua Bowen}
+
+\end{document}
