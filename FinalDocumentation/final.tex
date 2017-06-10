@@ -94,7 +94,7 @@ In addition to cloud compare we talked about OSVR, which is the Open Source Virt
 This is the headset we will be using to view the virtual environments. Our goal is to get cloud compare viewable in OSVR as if we can get it working in OSVR it should theoretically be compatible with any other VR headset, such as the VIVE or the Oculus.
 
 Our first goal is to get familiar with the OSVR. 
-If we can get something premade working in the OSVR that would be fantastic. 
+If we can get something pre-made working in the OSVR that would be fantastic. 
 From there we will work to create something unique in OpenGL and get that rendered. From there we will work to be familiar with cloud compare and there the future.
 
 \subsubsection{Fall Term Week 4: Adam Puckette}
@@ -187,9 +187,9 @@ Aside from the aforementioned tracking issue, we have had no problems with the p
 
 \subsubsection{Fall Term Week 8: Taylor Fahlman}
 
-This week, we had a short meeting with out client and discussed the rest of the term. We told him about the tech review we just finished and how it went, and about the upcomming assignments. Nothing pressing is needed by our client.
+This week, we had a short meeting with out client and discussed the rest of the term. We told him about the tech review we just finished and how it went, and about the upcoming assignments. Nothing pressing is needed by our client.
 
-We have started work on the final design document, and will begin work on the the division of the video project soon.
+We have started work on the final design document, and will begin work on the division of the video project soon.
 
 \subsubsection{Fall Term Week 8: Joshua Bowen}
 
@@ -227,7 +227,7 @@ No problems to report. With any luck, this will still be the case once we actual
 
 \subsubsection{Fall Term Week 10: Taylor Fahlman}
 
-This week our client is in New Zeland studying the recent earthquake. As such, he's been out of contact. We had no meeting with him this week. We worked on the desing document this week. It was difficult in that the IEEE standard we followed was difficult to decipher into what we needed. However we got it completed and I feel good about my contribution. We are now working on the progress report, and plan to have our portion of the document and slides done on Monday, then meet to finalize everything and record our video. We are also planning to do some basic OSVR learning over the break.
+This week our client is in New Zealand studying the recent earthquake. As such, he's been out of contact. We had no meeting with him this week. We worked on the design document this week. It was difficult in that the IEEE standard we followed was difficult to decipher into what we needed. However we got it completed and I feel good about my contribution. We are now working on the progress report, and plan to have our portion of the document and slides done on Monday, then meet to finalize everything and record our video. We are also planning to do some basic OSVR learning over the break.
 
 \subsubsection{Fall Term Week 10: Joshua Bowen}
 
@@ -263,7 +263,7 @@ We are concerned about the feasibility of CloudCompare as our point-cloud viewin
 
 \subsubsection{Winter Term Week 2: Taylor Fahlman}
 
-This week, we met with our client and spent some time setting up our hardware so that development and testing will be ready to go in the future. Adam now has his own OSVR heasdset, and our client has one as well. Josh took some time to look at examples for VR programming, and I dived into the CloudCompare source code to learn about its structure and where we will integrate the actual code.
+This week, we met with our client and spent some time setting up our hardware so that development and testing will be ready to go in the future. Adam now has his own OSVR headset, and our client has one as well. Josh took some time to look at examples for VR programming, and I dived into the CloudCompare source code to learn about its structure and where we will integrate the actual code.
 
 This week, we will spend time setting up our development environment and actually starting development.
 
@@ -277,7 +277,7 @@ This week, at least for me, was mostly spent getting the CS352 group up to speed
 
 \subsubsection{Winter Term Week 3: Taylor Fahlman}
 
-This week I worked on setting up the dev environment, as well as browsing more of the CloudCompare source code. Adam worked more on the headset and Josh on code examples for OSVR. Our goal this comming week is to get the code examples working on the headset, and then determine where to include what in the CloudCompare source code. I am going to fork the CloudCompare repo so that we have some code to work with and hopefully make a PR against at the end.
+This week I worked on setting up the dev environment, as well as browsing more of the CloudCompare source code. Adam worked more on the headset and Josh on code examples for OSVR. Our goal this coming week is to get the code examples working on the headset, and then determine where to include what in the CloudCompare source code. I am going to fork the CloudCompare repo so that we have some code to work with and hopefully make a PR against at the end.
 
 \subsubsection{Winter Term Week 3: Joshua Bowen}
 
@@ -439,7 +439,7 @@ We haven't had all that many problems crop up this week, it's just a matter of h
 
 \subsubsection{Spring Term Week 3: Taylor Fahlman}
 
-This week, I've been working on getting a fork from someome on the Potree repo integrated in our code to make the rendering work. The fork has a working stereoscopic potree version, so if that gets integrated in, it should "just work".
+This week, I've been working on getting a fork from someone on the Potree repo integrated in our code to make the rendering work. The fork has a working stereoscopic potree version, so if that gets integrated in, it should "just work".
 
 This weekend, I got it integrated in and working, so that at least in theory (and with a chrome WebVR emulation extension) it works. We will be testing this out on hardware this week and hopefully we can put a "done" marker on our project.
 
@@ -481,9 +481,9 @@ Our problem this week was with hardware. The OSVR HDK is a pain to setup and the
 
 \subsubsection{Spring Term Week 5: Taylor Fahlman}
 
-This week was busy with midterms, so we didn’t make much progress. We met with Matt and looked at and talked through a few of the issues we are having with the hardware. Our TA meeting was spent talking about the midterm and what is expected of that.
+This week was busy with midterms, so we didn't make much progress. We met with Matt and looked at and talked through a few of the issues we are having with the hardware. Our TA meeting was spent talking about the midterm and what is expected of that.
 
-This weekend, I took some time to attempt to fix the bugs when starting the hardware. I didn’t make it very far, but I did fix a few errors out of the gate. I need to spend more time this week pouring over the code and fixing it.
+This weekend, I took some time to attempt to fix the bugs when starting the hardware. I didn't make it very far, but I did fix a few errors out of the gate. I need to spend more time this week pouring over the code and fixing it.
 
 This week, we plan to spend a lot of time making our progress report.
 
@@ -657,15 +657,34 @@ Without device:
   \item Your display in your browser should now be in stereoscopic view.
 \end{enumerate}
 
-Currently, Noctilucent VR supports the Windows and Linux operating systems and works on most hardware capable of running the Chrome browser. 
+Currently, Noctilucent VR supports the Windows, and Linux operating systems and works on most hardware capable of running the Chrome browser. It has not been tested on Mac at time of writing, however it is expected to work as Chrome is the main component and Chrome is available on Mac.
 For the best experience we recommend a graphics card equal or greater in power to a nVidia GeForce GTX 970. 
-Anything lower spec and you may experience slowdowns which can be disorienting or even sickening in VR. 
+Anything lower spec and you may experience slowdowns which can be disorienting or even sickening in VR.
 
 \section{New Technology}
 
 \section{Lessons Learned}
 
 \subsection{Taylor Fahlman}
+
+In terms of technology, I learned a great deal about real-world software development. Most classes only cover simple programs without too many libraries.
+In projects that are actually used in real world situations, there are complex build systems and dependencies. When our team was working with Cloud Compare,
+I had to learn how to compile the project using cmake, learn how to install all the dependencies, fiddle with their paths, uninstall the one I downloaded and grab
+the correct version, wait for 30 minutes while everything compiles, then try and figure out how to fix all the errors that Visual Studio spit out. There was a similar
+learning process when we transitioned to Potree and WebVR. While I've used C++, there are many well known libraries we used that I had never touched before, such as
+the Boost library. I had never touched JavaScript before this project for anything more than "Hello, world!", so I also gained a fair amount of knowledge on how that works
+as well. Learning how VR works, both library specific and in general, as well as learning about point-clouds and what they are used for are probably the most useful things
+I learned. While I can learn a language or build systems in any capacity, learning VR and point-clouds from a PhD student is a unique experience I couldn't have easily
+had outside of this class. Hopefully these technical skills will be useful in the future, and I expect they will be.\\ 
+
+I also learned a great deal about non-technical things while working on this project. The most significant thing I learned is there can never be too much communication.
+With out client and TA, we had a lot of communication, which I believe directly translated to the successes we had. Within our team, whenever communication suffered, the work suffered
+as well. For example, the midterm progress report for winter term was done on time, but everyone assumed someone else was going to email the final documents to the instructors. If we
+had communicated more and specifically about all aspects of the project, this wouldn't have happened.\\
+
+Working in team was about what I expected it to be. Communication is key to a successful project. I also learned that I have a tendency to take on a lot of things, but I should
+trust my teammates more to take on tasks, and give myself less to do so I can work more effectively on a few small things. Management wise, delegation and confirmation of who has what is essential. Also, when multiple people try to take on the same role in a team, it gets messy. Discussing and agreeing on roles before hand would have helped immensely.\\
+If I could do it all over again, I would spend more time researching VR technologies so we didn't waste as much time on something we wouldn't end up using, and delegate more things to different members of the team.
 
 \subsection{Adam Puckette}
 
@@ -682,7 +701,7 @@ With limited time and resources available, it becomes that much more important n
 
 Much in the same vein, I learned a lot about coordination and delegation within the team. 
 With a large project, no one can do everything, and everyone must do something. 
-Different people will have different specialties, but relying on any one person's exclusive skillset will leave the entire project hanging if the suddenly become unavailable. 
+Different people will have different specialties, but relying on any one person's exclusive skill set will leave the entire project hanging if the suddenly become unavailable. 
 
 If I could do it all again, I would start looking into WebVR sooner and be better prepared for when the focus of our project changed. 
 I would also spend less time in the first two terms learning OSVR, since that proved to be far less useful than projected.  
@@ -692,7 +711,7 @@ I would also spend less time in the first two terms learning OSVR, since that pr
 On the technical end I learned that you can't just dive into pre-written code and expect to just understand everything.
 Working with code written for someone else's software is hard, and the time taken to explore and understand it is just as important to the end goal as knowing how to do what you want in the first place.
 I also learned a lot about Github, which I only had some minor experience with previously.
-Now I actually feel comfortable helping others use Github, though there are definitly still rooms for improvement.
+Now I actually feel comfortable helping others use Github, though there are definitely still rooms for improvement.
 Of course there is also things I learned about using API's such as WebVR, ThreeJS, WebGL.
 
 On the non-technical end I learned about how large scale projects operate.
@@ -702,11 +721,11 @@ The only real CS related group project experience I've received before was Softw
 
 For project work specifically, I learned about communication, github, meetings.
 It's really easy in retrospect to see what worked well and what didn't. 
-Even though I didn't neccessarily do certain things I still learned them as tools to use for the future.
+Even though I didn't necessarily do certain things I still learned them as tools to use for the future.
 For example, I learned that to more effectively work on the project it would have been easier to do more research upfront. 
 Because I didn't do as much research upfront, that effected me later and I have learned that lesson.
 
-For project management I learned about expectations and repsonsibility.
+For project management I learned about expectations and responsibility.
 Making sure everyone understands who is doing what significantly eases the burden of work.
 Keepings a list of things that need to be done also helps ease the burden of work.
 
@@ -715,8 +734,8 @@ We met a lot as a team, and I feel like that was really beneficial.
 To some extent I wish that we had taken more time to sit down and work together in the same room on things, but everyone has their own style.
 
 Finally, what would I do differently? A lot in retrospect. 
-I would have done more research, spending several weeks just learning about VR and how it's implemented as well as PoTree Viewer.
-We should have used PoTree Viewer from the get go and I wish we had done that, but there was no way we could have known it would be better without the work we did in Winter.
+I would have done more research, spending several weeks just learning about VR and how it's implemented as well as Potree Viewer.
+We should have used Potree Viewer from the get go and I wish we had done that, but there was no way we could have known it would be better without the work we did in Winter.
 I wouldn't have let Taylor carry the burden of debugging so much. We all should have gotten together and sat down with it.
 
 \section{Appendix 1: Code Listings}
