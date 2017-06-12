@@ -26,14 +26,14 @@
 
 \abstract
 Lidar is a powerful piece of technology that has been used for several years to map large real life locations to scale, for disaster relief, surveying, and other important geomatics problems.
-In an effort to improve the use of this technology we have worked to create a Virtual Reality extension to the open-source cloud viewing software PoTree Viewer.
+In an effort to improve the use of this technology we have worked to create a Virtual Reality extension to the open-source cloud viewing software potree Viewer.
 In this document you will find a years worth of effort and research into the capabilities a possibilities of Virtual Reality with Lidar Technology.
 It is our hope that this document will serve as a guide and a tool to those seeking to pick up where we left off in pursuing Virtual Reality Point-Cloud Data.
 
 \newpage
 \section{Introduction}
 
-Noctilucent VR is a WebVR-based plugin for the point-cloud viewing application, Potree Viewer. 
+Noctilucent VR is a WebVR-based plugin for the point-cloud viewing application, potree Viewer. 
 This plugin adds a virtual reality (VR) mode to the application which can be activated at the press of a button. 
 The VR mode renders the point cloud in a 3D stereoscopic display suitable for VR headsets such as the Google Cardboard. 
 This project was proposed by Matt O'Banion of the Geomatics laboratory at OSU in order to explore a cheaper, more portable and accessible alternative to their existing 3D TV setup. 
@@ -65,12 +65,12 @@ He took the role of director and supervisor over the course of the term, and wor
     \hline
     OpenGL Deliverable & Project shifted from OpenGL to WebGL & We had a WebGL demo, but it wasn't requested by our client so it is not part of the final documentation \\
     Proposal of Software & Discussed informally with client and made decision without a write-up & Due to the nature of our project, our client decided to change software without needing a formal proposal\\
-    Use of CloudCompare & Client requested a move to Potree due to time and ease of use & This move was beneficial to the project and we wish we had made the move sooner.\\
-    Manipulate data with zoom, rotate, crop, etc. & Due to the change to Potree, some of the analysis tools were no longer available to us & This is something that would need to be added to Potree before it can be added to our project.
+    Use of CloudCompare & Client requested a move to potree due to time and ease of use & This move was beneficial to the project and we wish we had made the move sooner.\\
+    Manipulate data with zoom, rotate, crop, etc. & Due to the change to potree, some of the analysis tools were no longer available to us & This is something that would need to be added to potree before it can be added to our project.
     
 \end{tabular}
 \end{table}
-
+\newpage
 
 \section{Design Document}
 
@@ -79,14 +79,25 @@ He took the role of director and supervisor over the course of the term, and wor
 \subsection{Discussion}
 
 Most of the changes to our Design Document didn't happen until after the winter revision as most of the changes to our project didn't come until then.
-However, the major change to our project, that of moving from CloudCompare to PoTree Viewer, didn't change our design document much.
-In fact the only major change was concerning the implementation of a UI to manipulate data, as PoTree Viewer lacked this functionality.
+However, the major change to our project, that of moving from CloudCompare to potree Viewer, didn't change our design document much.
+In fact the only major change was concerning the implementation of a UI to manipulate data, as potree Viewer lacked this functionality.
 Other than that change, only the references to CC needed to be changed as the document was written such that any point-cloud viewing software could be used as the base.
 
+\newpage
 \section{Tech Review}
 
 \input{techreview}
 
+\subsection{Discussion}
+The project shifted quite a bit from the outline left by the technical review. The virtual reality framework
+we chose, OSVR, was a constant throught the whole project; the most core part of our project remained the same,
+which made it much easier to start again with a new rendering software. The UI framework we chose was realted
+to CloudCompare, which itself became irrelevant to our project, so the UI choice changed from Qt to HTML/CSS/Javascript
+to match our move to Potree.
+The headset choice also remained the same since it was directly related to OSVR. Lastly and unfortunately, while our
+choice of preipheral hardware did not change, we did not reach a point in our project where we could use them, so
+this choice never was made relevant. 
+\newpage
 
 \section{Blog Posts}
 
@@ -197,7 +208,7 @@ Next week we will meet on tuesday as usual and look at the OSVR again and start 
 
 \subsubsection{Fall Term Week 7: Adam Puckette}
 
-We decided upon roles for the Technology Review this week. I was assigned to review our point-cloud visualization software, CloudCompare. We have found two viable alternatives to this, a WebGL solution called Potree viewer and the Linux only software that runs on the current setup. I will poke through the documentation for each over the weekend and write up a compare/contrast piece.
+We decided upon roles for the Technology Review this week. I was assigned to review our point-cloud visualization software, CloudCompare. We have found two viable alternatives to this, a WebGL solution called potree viewer and the Linux only software that runs on the current setup. I will poke through the documentation for each over the weekend and write up a compare/contrast piece.
 
 Next week we should start work on the Design Document, as that could take a while to complete. We will need time to get used to the IEEE std 1016-2009. Since this is a much longer standard we will have to review it to decide which bits are relevant to our current project.
 
@@ -369,47 +380,47 @@ This week we continued messing around with WebGL, and managed to get a compatibl
 
 \subsubsection{Winter Term Week 7: Taylor Fahlman}
 
-Our client decided this week to settle on using the Potree viewer which uses WebGL, and integrating WebVR with this. We started to get our environment set up to test this, along with some data. Next week, we will be working on the actually code.
+Our client decided this week to settle on using the potree viewer which uses WebGL, and integrating WebVR with this. We started to get our environment set up to test this, along with some data. Next week, we will be working on the actually code.
 
 \subsubsection{Winter Term Week 7: Joshua Bowen}
 
-This week we decided to change the course of our project. Instead of designing our add-on for cloud compare we are designing it for Potree Viewer. This is not a complete project overhaul but it's an important change. Using Potree Viewer opens up our project to be useable by even more devices, including these like the google cardboard.
+This week we decided to change the course of our project. Instead of designing our add-on for cloud compare we are designing it for potree Viewer. This is not a complete project overhaul but it's an important change. Using potree Viewer opens up our project to be useable by even more devices, including these like the google cardboard.
 
 \subsubsection{Winter Term Week 8: Adam Puckette}
 
-This week, we committed to focus solely on Potree Viewer and WebVR for our project. As Potree Viewer is in active development, works on most popular internet browsers, and seems to have better performance than CloudCompare or other equivalent software, we believe it is the best choice for our project. Progress has been swift, and we were quickly able to throw together a proof-of-concept WebVR demo to show the API's potential.
+This week, we committed to focus solely on potree Viewer and WebVR for our project. As potree Viewer is in active development, works on most popular internet browsers, and seems to have better performance than CloudCompare or other equivalent software, we believe it is the best choice for our project. Progress has been swift, and we were quickly able to throw together a proof-of-concept WebVR demo to show the API's potential.
 
-Next week we plan to keep working on getting a demo running in the headset itself, as well as tying Potree Viewer into the WebVR API.
+Next week we plan to keep working on getting a demo running in the headset itself, as well as tying potree Viewer into the WebVR API.
 
 \subsubsection{Winter Term Week 8: Taylor Fahlman}
 
-This week, we started work integrating WebVR functionality with the Potree viewer. This process is much easier than our CloudCompare endeavors. We got a small WebGL/WebVR example up and running using Three.js and examples they had on their website. The next thing to do is to hopefully enable VR in Potree, and ensure it actually works, then debug and/or add features.
+This week, we started work integrating WebVR functionality with the potree viewer. This process is much easier than our CloudCompare endeavors. We got a small WebGL/WebVR example up and running using Three.js and examples they had on their website. The next thing to do is to hopefully enable VR in potree, and ensure it actually works, then debug and/or add features.
 
 \subsubsection{Winter Term Week 8: Joshua Bowen}
 
-This week we worked on the project and found potential latches int he project through an api called three.js. Using three.js we can render 3d objects regularly or in VR. We found that both WebVR and Potree Viewer utilize this api and so the next step is to just mesh the two together. We were working on this with moderate success so it's look really positive.
+This week we worked on the project and found potential latches int he project through an api called three.js. Using three.js we can render 3d objects regularly or in VR. We found that both WebVR and potree Viewer utilize this api and so the next step is to just mesh the two together. We were working on this with moderate success so it's look really positive.
 
 \subsubsection{Winter Term Week 9: Adam Puckette}
 
-This week we began trying to put together a basic VR mode for Potree Viewer. We have removed the CloudCompare fork from our Github, and have begun working with a file (three.js) that holds much of the code we need.
+This week we began trying to put together a basic VR mode for potree Viewer. We have removed the CloudCompare fork from our Github, and have begun working with a file (three.js) that holds much of the code we need.
 
 Our final presentation is approaching, and I will be quite busy over the weekend putting the documentation together for the poster and final report.
 
 \subsubsection{Winter Term Week 9: Taylor Fahlman}
 
-This week, we made a lot of progress on enabling VR in the Potree viewer. We are likely to finish implementing it next week, and this is what we will work on, in addition to the poster, presentation, and final write-ups.
+This week, we made a lot of progress on enabling VR in the potree viewer. We are likely to finish implementing it next week, and this is what we will work on, in addition to the poster, presentation, and final write-ups.
 
 \subsubsection{Winter Term Week 9: Joshua Bowen}
 
-I spent this week looking at the work that Taylor was doing trying to get the VR hooked up to POTree Viewer. My laptop broke on sunday at the beginning of the week and so I was pretty much out of action for the whole week until a new one arrived. I made plans with everyone to meet on saturday and work on some stuff and get everything sorted. Everything was looking positive and we hope to have at least a working version by the end of the next week.
+I spent this week looking at the work that Taylor was doing trying to get the VR hooked up to potree Viewer. My laptop broke on sunday at the beginning of the week and so I was pretty much out of action for the whole week until a new one arrived. I made plans with everyone to meet on saturday and work on some stuff and get everything sorted. Everything was looking positive and we hope to have at least a working version by the end of the next week.
 
 \subsubsection{Winter Term Week 10: Adam Puckette}
 
-As of the 10th week of Winter term, we have yet to produce a working prototype. We have been working with various versions of Potree viewer, WebVR, and the nightly builds of both Firefox and Chrome. We reverted our three.js file to a previous version, and then Potree Viewer updated to use the newer version exclusively, requiring us to update it once more. It seems likely that we will have a working demo soon, and we must then turn our sights towards getting something put together to show at expo. Next week, we plan to have this working and talk with our client about designing a user interface of some sort, perhaps making use of the Leap Motion.
+As of the 10th week of Winter term, we have yet to produce a working prototype. We have been working with various versions of potree viewer, WebVR, and the nightly builds of both Firefox and Chrome. We reverted our three.js file to a previous version, and then potree Viewer updated to use the newer version exclusively, requiring us to update it once more. It seems likely that we will have a working demo soon, and we must then turn our sights towards getting something put together to show at expo. Next week, we plan to have this working and talk with our client about designing a user interface of some sort, perhaps making use of the Leap Motion.
 
 \subsubsection{Winter Term Week 10: Taylor Fahlman}
 
-This week, we finished integrating WebVR with Potree Viewer using three.js. Unfortunately, the nightly builds of Firefox and Chrome are too new to support this version of three.js. However, we found a newer version of Potree viewer that uses a new version of three.js that is supported by nightlies. At this point, we need to port the code we already wrote to the newest version of Potree viewer. In theory, this should 'just work'.
+This week, we finished integrating WebVR with potree Viewer using three.js. Unfortunately, the nightly builds of Firefox and Chrome are too new to support this version of three.js. However, we found a newer version of potree viewer that uses a new version of three.js that is supported by nightlies. At this point, we need to port the code we already wrote to the newest version of potree viewer. In theory, this should 'just work'.
 
 \subsubsection{Winter Term Week 10: Joshua Bowen}
 
@@ -421,17 +432,17 @@ The project itself is almost almost there. We just have to stitch some final thi
 
 \subsubsection{Spring Term Week 1: Adam Puckette}
 
-For the first week of Spring term we formed a game plan for the expo. After talking with our client on Tuesday we plan to get the viewer component of Potree Viewer working in WebVR.
+For the first week of Spring term we formed a game plan for the expo. After talking with our client on Tuesday we plan to get the viewer component of potree Viewer working in WebVR.
 
 Taylor will be gone to Canada through the weekend, so we are a man down until next week.
 
-One problem we've come across is that Potree Viewer separates its UI and viewer functions in such a way that it will be quite difficult to get the UI to display in VR. This shouldn't be an issue we have to solve before expo, but it will be a future concern.
+One problem we've come across is that potree Viewer separates its UI and viewer functions in such a way that it will be quite difficult to get the UI to display in VR. This shouldn't be an issue we have to solve before expo, but it will be a future concern.
 
 \subsubsection{Spring Term Week 1: Taylor Fahlman}
 
 (Sorry for the late blog, I was gone in Canada for the week).
 
-Over spring break, I spent a long time looking into the Potree viewer code, seeing where we should integrate the VR code. I found that the viewer component is where the THREE.js rendering happens, so it would be fairly simple in theory to enable the VR rendering there. I also started following this github issue [here](https://github.com/potree/potree/issues/292). This looks promising.
+Over spring break, I spent a long time looking into the potree viewer code, seeing where we should integrate the VR code. I found that the viewer component is where the THREE.js rendering happens, so it would be fairly simple in theory to enable the VR rendering there. I also started following this github issue [here](https://github.com/potree/potree/issues/292). This looks promising.
 
 I was gone for a choir tour from 4/5-4/9, so I'm not sure what progress has been made in the past week.
 
@@ -439,7 +450,7 @@ Our plans are to sit down and implement this VR rendering so we have a working v
 
 \subsubsection{Spring Term Week 1: Joshua Bowen}
 
-Over break Taylor learned more about PoTree Viewer. We now know that the viewer entity is separate from the UI entity. This is good and bad. It means that it should be easy now to insert the VR code because we know exactly where it goes. It could be bad because that means the UI won't render in VR.
+Over break Taylor learned more about potree Viewer. We now know that the viewer entity is separate from the UI entity. This is good and bad. It means that it should be easy now to insert the VR code because we know exactly where it goes. It could be bad because that means the UI won't render in VR.
 
 The problem, as I mentioned, is that the UI probably won't render in VR. If the Window is sent to the headset and rendered, this won't be a problem, but there is the potential issue that the UI goes into the headset too and cause sickness due to not being rendered properly.
 
@@ -457,13 +468,13 @@ The only problems this week revolve around having to scale back our expectations
 
 We didn't have a meeting this due to sickness by Matt. I've been attempting to look at the code as much as I could, but due to a large choir concert coming up, it's been difficult to make progress.
 
-Currently, there is a working implementation someone made from a fork of Potree on the Potree github repo. It looks like some fairly simple changes, so hopefully they will be simple to implement.
+Currently, there is a working implementation someone made from a fork of potree on the potree github repo. It looks like some fairly simple changes, so hopefully they will be simple to implement.
 
 In the next week, I hope to make more progress integrating the working fork into our codebase. I don't know how much progress will be made though, due to at least 12 more hours being put into this choir concert outside of class time.
 
 \subsubsection{Spring Term Week 2: Joshua Bowen}
 
-This week I messed around in the code of PoTree Viewer, specifically Potree.js which is where most of the Viewer related data is stored.
+This week I messed around in the code of potree Viewer, specifically potree.js which is where most of the Viewer related data is stored.
 
 The code is very daunting, at over 20,000 lines of code. Finding all the correct places to initialize variables is quite the task.
 
@@ -475,11 +486,11 @@ We have been working this week on the back of another codebase, a preexisting pr
 
 By Monday we will know whether we should ask for an Incomplete grade so that we can deliver a proper product to our client. Once that is determined, we need to have a talk with our instructors about our next course of action.
 
-We haven't had all that many problems crop up this week, it's just a matter of having enough time to do this project justice. If we had known week 1 of Fall that we would be using WebVR and Potree Viewer, we could have made much more headway by now. This is the nature of emergent technology, it can't be helped.
+We haven't had all that many problems crop up this week, it's just a matter of having enough time to do this project justice. If we had known week 1 of Fall that we would be using WebVR and potree Viewer, we could have made much more headway by now. This is the nature of emergent technology, it can't be helped.
 
 \subsubsection{Spring Term Week 3: Taylor Fahlman}
 
-This week, I've been working on getting a fork from someone on the Potree repo integrated in our code to make the rendering work. The fork has a working stereoscopic potree version, so if that gets integrated in, it should "just work".
+This week, I've been working on getting a fork from someone on the potree repo integrated in our code to make the rendering work. The fork has a working stereoscopic potree version, so if that gets integrated in, it should "just work".
 
 This weekend, I got it integrated in and working, so that at least in theory (and with a chrome WebVR emulation extension) it works. We will be testing this out on hardware this week and hopefully we can put a "done" marker on our project.
 
@@ -491,7 +502,7 @@ I plan to spend the weekend working on an opengl webvr portion just to make sure
 
 \subsubsection{Spring Term Week 4: Adam Puckette}
 
-Quite a few developments this week, as we finally saw some real progress. We now have a working prototype of the project. We still need to add tracking and get it working within the OSVR headset, but we now have a version of Potree Viewer that displays in stereoscopic 3D at the touch of a button. This suits our requirements as detailed in our Requirements Document, and we'll have something concrete to display for expo.
+Quite a few developments this week, as we finally saw some real progress. We now have a working prototype of the project. We still need to add tracking and get it working within the OSVR headset, but we now have a version of potree Viewer that displays in stereoscopic 3D at the touch of a button. This suits our requirements as detailed in our Requirements Document, and we'll have something concrete to display for expo.
 
 We plan to add documentation and and install readme before the code freeze hits, but our code is pretty much in its final state for this term. After the code freeze we will work on adding some features before expo.
 
@@ -507,7 +518,7 @@ This next week I will hopefully be working on fixing bugs and getting the hardwa
 
 \subsubsection{Spring Term Week 4: Joshua Bowen}
 
-Success. Taylor managed to get a working build of Potree Viewer with VR. We have at least basic funxtionalirt now.
+Success. Taylor managed to get a working build of potree Viewer with VR. We have at least basic funxtionalirt now.
 
 Going forward we will work on improving th way you interact with thr data, making a video, and generally making things better.
 
@@ -577,9 +588,9 @@ Going forward we will continue to work on this problem until the headset is work
 
 \subsubsection{Spring Term Week 8: Adam Puckette}
 
-Not much progress to report this week, as we still haven't figured out why the sending of frames to the headset is causing problems in Potree Viewer and crashing the browser. We plan to address this soon, and our goal is to have this problem resolved and the tracking working by the end of term.
+Not much progress to report this week, as we still haven't figured out why the sending of frames to the headset is causing problems in potree Viewer and crashing the browser. We plan to address this soon, and our goal is to have this problem resolved and the tracking working by the end of term.
 
-The first thing I would tell myself if I was to redo this project from Fall term would be to focus on WebVR and Potree Viewer early and skip the two terms of research that led there. We could have gotten quite a bit more done if we knew the direction the project would take at the start.
+The first thing I would tell myself if I was to redo this project from Fall term would be to focus on WebVR and potree Viewer early and skip the two terms of research that led there. We could have gotten quite a bit more done if we knew the direction the project would take at the start.
 
 As for my most valuable skill learned, I'd say gaining a more thorough knowledge of Virtual Reality as it stands today. I now know how to address some of the problems that crop up with the current hardware, which will be handy to know if I end up doing more VR development.
 
@@ -591,7 +602,7 @@ I learned a fair amount about GitHub and LaTeX from Taylor, since I hadn't used 
 
 If I were the client for this project, I would be obliged to consider what we have learned over the course of three terms, and would be moderately satisfied with the final result (though I would be disappointed at the lack of proper tracking).
 
-If we were to continue the project, the tracking would need to be addressed soonest. Once that was done, we would need to work at designing a new Potree Viewer interface for VR and getting it to display in the headset. Given how Potree Viewer works, that would be surprisingly difficult. Once that was done, we would want to begin porting tools into VR with some sort of motion-tracking system, i.e. the Leap Motion or Vive or Oculus controllers.
+If we were to continue the project, the tracking would need to be addressed soonest. Once that was done, we would need to work at designing a new potree Viewer interface for VR and getting it to display in the headset. Given how potree Viewer works, that would be surprisingly difficult. Once that was done, we would want to begin porting tools into VR with some sort of motion-tracking system, i.e. the Leap Motion or Vive or Oculus controllers.
 
 \subsubsection{Spring Term Week 8: Taylor Fahlman}
 
@@ -599,7 +610,7 @@ This last week after expo, we've gotten back to work on the code itself, cleanin
 
 
 **If you were to redo the project from Fall term, what would you tell yourself?**
-Take more time to research and find flaws early. Our client switched to Potree in winter since CloudCompare was too complex for the project and time. If we had found CloudCompare wouldn't work earlier, it could have been a much smoother process. 
+Take more time to research and find flaws early. Our client switched to potree in winter since CloudCompare was too complex for the project and time. If we had found CloudCompare wouldn't work earlier, it could have been a much smoother process. 
 
 **What's the biggest skill you've learned?**
 Quickly learning new technical things. I learned CMAKE, Visual Studio, how to compile massive projects in Windows and a few frameworks in a few weeks, then had to switch to Javascript and its frameworks the next few weeks, so it was essential that I could adapt and learn the new system quickly. 
@@ -629,7 +640,7 @@ Questions:
 
 **If you were to redo the project from Fall term, what would you tell yourself?**
 
-I would tell myself that we should have worked with Potree Viewer from the beginning and that it would be beneficial to start looking into how PotreeViewer worked long before we wrote any code for it.
+I would tell myself that we should have worked with potree Viewer from the beginning and that it would be beneficial to start looking into how potreeViewer worked long before we wrote any code for it.
 
 **What's the biggest skill you've learned?**
 
@@ -651,7 +662,7 @@ I learned that clear communication of responsibilities of certain parts of the p
 
 **If you were the client for this project, would you be satisfied with the work done?**
 
-I'm not sure. I'm eternally grateful for our clients patience and working with us and that's why I feel like our work isn't quite There yet. While the basic functionality of our project technically works, we still have to get the OSVR headset working right. While I understand that the fact it isn't working is the product of things that are to some extent beyond our control. If we had started with PoTree Viewer and done more research first maybe we could have it working by now. We have worked hard and had to change a lot of what we did and I think the work was there, but because the final product isn't quite there yet, I can't help but feel like I have disappointed. So I don't know for sure.
+I'm not sure. I'm eternally grateful for our clients patience and working with us and that's why I feel like our work isn't quite There yet. While the basic functionality of our project technically works, we still have to get the OSVR headset working right. While I understand that the fact it isn't working is the product of things that are to some extent beyond our control. If we had started with potree Viewer and done more research first maybe we could have it working by now. We have worked hard and had to change a lot of what we did and I think the work was there, but because the final product isn't quite there yet, I can't help but feel like I have disappointed. So I don't know for sure.
 
 **If your project were to be continued next year, what do you think needs to be working on?**
 
@@ -659,15 +670,15 @@ If we don't get it finished, then the OSVR part of the project still needs work.
 
 \section{Project Documentation}
 
-Noctilucent VR combines Potree Viewer with WebVR to enable stereoscopic and VR view of point cloud data. 
+Noctilucent VR combines potree Viewer with WebVR to enable stereoscopic and VR view of point cloud data. 
 This project is capable of rendering point clouds of several million points at a stable framerate in any compatable VR headset. 
 Lidar point clouds are a collection of points that are collected by bouncing light off objects to determine its position in 3D space. 
 They are used in surveying, disaster recovery, and the archiving of historical monuments.
 
-The plugin works by altering the viewer component of Potree Viewer. 
+The plugin works by altering the viewer component of potree Viewer. 
 The program already makes use of a file named three.js, and this file has support for WebVR built in. 
 At its heart, all this plugin does is call upon those built-in functions to render the viewer in stereoscopic 3D. 
-In addition we have added a checkbox and a button to Potree Viewer's GUI component that allows the user to switch between normal 2D and 3D VR mode in real-time.
+In addition we have added a checkbox and a button to potree Viewer's GUI component that allows the user to switch between normal 2D and 3D VR mode in real-time.
 
 With an OSVR-compatible device:
 
@@ -703,10 +714,10 @@ Anything lower spec and you may experience slowdowns which can be disorienting o
 
 Our learning mostly came from the following sources:
 \begin{itemize}
-  \item Documentation of CloudCompare, PoTree Viewer, WebVR, and ThreeJS
+  \item Documentation of CloudCompare, potree Viewer, WebVR, and ThreeJS
   \item Conversations with the maintainer/developer of CloudCompare
-  \item Conversations with a developer of PoTree Viewer
-  \item Source Code for CloudCompare, PoTree Viewer, and WebVR
+  \item Conversations with a developer of potree Viewer
+  \item Source Code for CloudCompare, potree Viewer, and WebVR
   \item Trial and Error
 \end{itemize}
 
@@ -730,7 +741,7 @@ In terms of technology, I learned a great deal about real-world software develop
 In projects that are actually used in real world situations, there are complex build systems and dependencies. When our team was working with Cloud Compare,
 I had to learn how to compile the project using cmake, learn how to install all the dependencies, fiddle with their paths, uninstall the one I downloaded and grab
 the correct version, wait for 30 minutes while everything compiles, then try and figure out how to fix all the errors that Visual Studio spit out. There was a similar
-learning process when we transitioned to Potree and WebVR. While I've used C++, there are many well known libraries we used that I had never touched before, such as
+learning process when we transitioned to potree and WebVR. While I've used C++, there are many well known libraries we used that I had never touched before, such as
 the Boost library. I had never touched JavaScript before this project for anything more than "Hello, world!", so I also gained a fair amount of knowledge on how that works
 as well. Learning how VR works, both library specific and in general, as well as learning about point-clouds and what they are used for are probably the most useful things
 I learned. While I can learn a language or build systems in any capacity, learning VR and point-clouds from a PhD student is a unique experience I couldn't have easily
@@ -793,8 +804,8 @@ We met a lot as a team, and I feel like that was really beneficial.
 To some extent I wish that we had taken more time to sit down and work together in the same room on things, but everyone has their own style.
 
 Finally, what would I do differently? A lot in retrospect. 
-I would have done more research, spending several weeks just learning about VR and how it's implemented as well as Potree Viewer.
-We should have used Potree Viewer from the get go and I wish we had done that, but there was no way we could have known it would be better without the work we did in Winter.
+I would have done more research, spending several weeks just learning about VR and how it's implemented as well as potree Viewer.
+We should have used potree Viewer from the get go and I wish we had done that, but there was no way we could have known it would be better without the work we did in Winter.
 I wouldn't have let Taylor carry the burden of debugging so much. We all should have gotten together and sat down with it.
 
 \section{Appendix 1: Code Listings}
@@ -804,14 +815,14 @@ I wouldn't have let Taylor carry the burden of debugging so much. We all should 
 In this simple piece of code we create the checkbox in the sidebar that is used to generate the enable vr button.
 This checkbox makes a call to the EnableVR function that is shown below.
 
-*POTREE.JS LINE 13250 - 13286 (or up to your descrepency)*
+*potree.JS LINE 13250 - 13286 (or up to your descrepency)*
 
 When you push the checkbox generated by the code-snippet above this, you make a call to this function.
 This function calls WebVR and determines if WebVR is available for use on the machine.
 The machine is available for WebVR if it has VR capable tech, like a headset, or is otherwise emulating VR tech.
 If the machine passes this test, the ability to use VR is activated and the button to actually start using VR appears.
 
-*POTREE.JS LINE 17894 - 17904*
+*potree.JS LINE 17894 - 17904*
 
 When the EnableVR button is clicked, the window is placed into FullScreen mode.
 
@@ -820,19 +831,19 @@ When the EnableVR button is clicked, the window is placed into FullScreen mode.
 \begin{figure}[h]
     \centering
     \includegraphics[scale=.25]{NoctVR1}
-	\caption{Example of a rendered pointcloud in PoTree Viewer}
+	\caption{Example of a rendered pointcloud in potree Viewer}
 \end{figure}
 
 \begin{figure}[h]
     \includegraphics[scale=.25]{NoctVR2}
 	\centering
-	\caption{PoTree Viewer with the hamburger menu open, and the Enable VR button visible}
+	\caption{potree Viewer with the hamburger menu open, and the Enable VR button visible}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=.25]{NoctVR3}
-	\caption{PoTree Viewer with Noctilucent VR just activated}
+	\caption{potree Viewer with Noctilucent VR just activated}
 \end{figure}
 
 \begin{figure}[h]

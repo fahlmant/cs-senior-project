@@ -7,12 +7,12 @@
 
 Noctilucent VR will allow users to view and manipulate point-cloud data in virtual reality. 
 The required concepts, terminologies, design viewpoints, and use methodologies for Noctilucent VR are described herein. 
-Noctilucent VR will be created by integrating an existing open source point-cloud viewing program with the OSVR framework. 
+ctilucent VR will be created by integrating an existing open source point-cloud viewing program with the OSVR framework. 
 This will allow us to create modular and platform-independent software. 
 With Noctilucent VR, anyone with a virtual reality headset will be able to download and view point-cloud data without needing specialized hardware.
 
-\section{Overview}
-\subsection{Scope}
+\subsection{Overview}
+\subsubsection{Scope}
 
 This document describes the software design and information regarding the Virtual Reality Lidar Point Cloud Viewing Software known as Noctilucent VR.
 This software is intended to be used by professionals seeking to improve their Lidar Cloud viewing experience.
@@ -21,22 +21,22 @@ Uses can include anything from casual cloud data viewing to professional informa
 Noctilucent and it's design can be used on any computer capable of handling the graphics rendering.
 This projects only applicability restriction is in the capabilities of the computer running it.
 
-\subsection{Purpose}
+\subsubsection{Purpose}
 
 Noctilucent VR exists to expand the current capabilities of humans to view Lidar Cloud data.
 Specifically the goal of this project is to take 3D information previously displayed in 2D and provide an easy to use, easily accessible, Open Source alternative to viewing this data which allows for it's viewing in 3D.
 This project exists as viewing 3D data in 3D is an important aspect of being able to garner easily all the information from that data as possible.
 
-\subsection{Intended Audience}
+\subsubsection{Intended Audience}
 
 This project is primarily intended to be used by scientists, engineers, and those who perform informatics, however, the project is not limited to those audiences.
 The Free and Open Source nature of this project allows it's use by anyone with access to cloud compare, a virtual reality headset, a wiimote, and a computer capable of running this software.
 
-\subsection{Conformance}
+\subsubsection{Conformance}
 
-Noctilucent VR conforms to this document if it satisfies the requirements as they are outlined in Sections 4 and 5 of this Document. Requirements are denoted by the verb shall.
+Noctilucent VR conforms to this document if it satisfies the requirements as they are outlined in subsections 4 and 5 of this Document. Requirements are denoted by the verb shall.
 
-\section{Definitions}
+\subsection{Definitions}
 
 {\parindent0pt
 \textbf{Free and Open Source Software (FOSS)}\\
@@ -68,9 +68,9 @@ The piece of hardware inside a computer responsible for performing microprosses 
 The refresh rate at which the computer draws a scene over the course of a second.\\
 }
 
-\section{Design}
+\subsection{Design}
 
-\subsection{Stakeholders}
+\subsubsection{Stakeholders}
 
 Matt O'Banion - For use in geo-informatics
 
@@ -84,7 +84,7 @@ Matt O'Banion - For use in geo-informatics
  \item Shall interface with point-cloud viewing software
 \end{itemize}
 
-\subsection{Context Viewpoint}
+\subsubsection{Context Viewpoint}
 
 The context of a software project is the environment and systems with which it interacts. 
 These external elements are detailed below, along with a description of their interaction with our project and their responsibilities towards the user and each other. 
@@ -110,7 +110,7 @@ The user provides input in the form of positional tracking and orientation data 
 The user also provides interaction data directly to the point-cloud viewing software to measure and manipulate the point-cloud data. 
 The point-cloud viewing software in turn updates the headset display of said measured and manipulated data via the OSVR framework.
 
-\subsection{Interface Viewpoint}
+\subsubsection{Interface Viewpoint}
 
 The interface of Noctlilucent VR involves both hardware and a software componenets. 
 The harware component will allow the user to manipulate the dataset with physical actions,
@@ -148,7 +148,7 @@ with one selection.
         3D data for the user. While not integral for the main goal of this project to work, this componenet provides
         useful tools that enable the user to more effectively perform research on their data.
 
-\subsection{Structure Viewpoint}
+\subsubsection{Structure Viewpoint}
 
 The structure of Noctilucent VR follows these constraints:
 The GPU of the computer is able to run and render points in the point-cloud rendering software
@@ -186,13 +186,13 @@ action possible on the 3D data set.\\
 \textit{Name}: Input device and point-cloud software\\
 \textit{Type}: Interface\\
 \textit{Purpose}: The interface between the input device and the user interface is a given, but a necessity. The user should
-be able to use an input device to select everything within the userinterface, as well as select certain cross sections of the
+be able to use an input device to select everything within the userinterface, as well as select certain cross subsections of the
 data itself. The input device will most likely already be enabled within the OSVR, or will work with OSVR once it is enabled
 in the point cloud software. The input device enables every possible action with this software, and thus needs to be extensively
 tested to ensure every desired action can be achieved with it.
 
 
-\subsection{Interaction Viewpoint}
+\subsubsection{Interaction Viewpoint}
 
 Noctilucent VR will have six primary interactions.
 The first interaction is between the cloud viewing software and the GPU.
@@ -230,13 +230,4 @@ The last ineraction is between the UI and the cloud viewing software
 		\textit{Name}: Auxillery Device
 		\textit{Type}: Component\\
 		\textit{Purpose}: A device used by the user to edit, manipulate, and change views of the data without the need for a keyboard and mouse.
-
-\newpage
-\vspace{2pc}
-
-\noindent \namesigdate{Matt O'Banion} \hfill \namesigdate[3cm]{Adam Puckette}
-
-\vspace{2pc}
-
-\noindent \namesigdate{Taylor Fahlman} \hfill \namesigdate[3cm]{Joshua Bowen}
 
