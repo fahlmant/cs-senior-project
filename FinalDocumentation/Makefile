@@ -4,7 +4,7 @@ HTML=main_html
 default: pdf
 
 dvi: ${TARGET}.tex 
-	latex ${TARGET}.tex
+	latex -shell-escape ${TARGET}.tex
 
 ps: dvi
 	dvips -R -Poutline -t letter ${TARGET}.dvi -o ${TARGET}.ps
